@@ -1,0 +1,44 @@
+
+\paragraph{Motivácia a význam práce}
+
+Historická šifrácia je fascinujúca oblasť skúmania nielen preto, že odhaľuje metódy utajovania informácií v minulosti, ale aj preto, že poskytuje zaujímavý úvod do politiky, vojny a spoločenských pomerov jej podaktorých častí. Medzi pokročilé a historicky významné šifrovacie systémy patrili takzvané nomenklátory. Tieto systémy párujúce rôzne techniky zašifrovávania jednotlivých písmen ako sú substitúcie, n-gramy, klamáče (písmená alebo iné symboly, ktoré sa nešifrovali) a kódové označenia („čísla“ alebo jednoslabičné šifry), považované vtedy za spoľahlivú formu krytia správ. Kľúče k týmto šifram, často rozsiahle, starostlivo upratané tabuľky podľa abecedy nemožno rozoznávať rýchlo, sú to manuálne záznamy na papieri.
+
+Manuálna analýza a rozdelenie odpovedajúcich tabuliek sa stáva tým náročná, chybováa vyžaduje veľa času. Každý kľúč sa líši svojim prevedením a kompozíciou (napr. tabuľka pre homofóne šifry, zoznam písmen pre slová a alebo n-grammi. Časti sú síce vizuálne oddelené, no ich presná identifikácia a miesto v rukou písaných kľúčoch predstavuje svoj druh výzvy. Táto úloha je sťažená rukopisom. Každého z rukopisov je iný a ľudí ktorí písali tieto kľúče pred stovkami rokov je úplne iný. 
+
+Práve tu prichádza k slovu umelá inteligencia (AI), konkrétne metódy hlbokého učenia. Automatizované rozpoznávanie „nomenklátorových kľúčov“ z rukopisu by mohlo ušetriť veľa času a starosti histórom alebo kryptográfom. Identifikáciou a izoláciou jednotlivých funkčných blokov na stránke kľúča sa vytvára predpoklad pre ďalšie kroky analýzy a spracovanie. Tou je napríklad rozpoznávanie znakov (OCR) špecificky prispôsobené pre daný segmentovaný blok, alebo priama podpora pri dešifrovaní.
+
+\paragraph{Ciele práce}
+
+Cieľom práce je otestovanie a porovnani umelej inteligencie na automatickú identifikáciu kľúčových častí rukou písaných dokumentov. Tento cieľ sa dosiahne v rámci práce v týchto bodoch:   
+
+1. Preštudovať a analyzovať problematiku historických substitučných šifier so zameraním na nomenklátory. Tento cieľ zahŕňa pochopenie ich štruktúry a vizuálneho usporiadania na rukou písaných dokumentoch.
+
+2. Preskúmať súčasné metódy detekcie pomocou umelej inteligencie využiteľné pri rukou písaných dokumentov. Dôraz bude kladený na techniky objektovej detekcie, najmä na architektúry hlbokých neurónových sietí ako je YOLO. 
+
+3. Analyzovať súčasný stav technológií a vybrať vhodný model umelej inteligencie pre úlohu segmentácie nomenklátorových kľúčov. Voľba bude zdôvodnená na základe relevantných kritérií. 
+
+4. Pripraviť a anotovať dataset rukou písaných nomenklátorových šifrovacích kľúčov. Tento cieľ zahŕňa zber dát, definovanie anotácii a rozdelenie datasetu na tréningovú, validačnú a testovaciu množinu. Súčasťou bude aj príprava datasetu do troch foriem: pôvodnej, binarizovanej a augmentovanej. 
+
+5. Natrénovať vybraný model umelej inteligencie na pripravených variantoch dátovej sady. Experimenty budú zahŕňať tréning na pôvodných, binarizovaných a augmentovaných dátach. 
+
+6. Analyzovať a vyhodnotiť výsledky trénovania a testovania modelu. Porovnanie efektívnosti modelu na rôznych variantoch datasetu. Súčasťou bude aj testovanie na dátach, ktoré neboli použité pri tréningu, a návrh možných vylepšení implementovaného riešenia. 
+
+7. Zdokumentovať celý proces, dosiahnuté výsledky a závery vo forme bakalárskej práce.
+
+Naplnením týchto cieľov práca prispeje k automatizácii analýzy špecifického typu historických dokumentov pomocou moderných nástrojov umelej inteligencie.
+
+\paragraph{Štruktúra práce}
+
+Táto bakalárska práca je rozdelená do siedmich kapitol, ktoré pokrývajú teóriu, analýzu, návrh riešenia, implementáciu a výsledky systému pre detekciu rukou písaných nomenklátorových šifrovacích kľúčov.
+
+Kapitola Teoretické východiská poskytuje teoretický základ pre pochopenie problematiky. Najprv sa venuje historickým substitučným šifrám, s detailným zameraním na nomenklátory, ich typické časti a vizuálne charakteristiky na papieri. Následne sa kapitola zameriava na relevantné koncepty z oblasti umelej inteligencie pre porozumenie rukou písaných dokumentov, vrátane metód detekcie objektov s dôrazom na architektúru YOLO.
+
+Kapitola Analýza súčasného stavu a návrh riešenia mapuje existujúce prístupy k problematike a prehľad využitia umelej inteligencie pri analýze historických dokumentov a šifier. Na základe tejto analýzy je zdôvodnený výber konkrétnej technológie pre riešenie problematiky a predstavený celkový návrh systému.
+
+Kapitola Príprava dátovej sady (Datasetu) detailne popisuje proces tvorby a prípravy datasetu, ktorý je kľúčový pre tréning modelov umelej inteligencie. Zahŕňa informácie o zdroji a charakteristike dát, proces anotácie jednotlivých segmentov nomenklátorových kľúčov, definovaní tried, rozdelenie dát na tréningovú, validačnú a testovaciu množinu. Podrobne sú opísané aj kroky predspracovania dát a to príprava pôvodnej, binarizovanej a augmentovanej verzie datasetu.
+
+Kapitola Implementácia a experimenty sa zaoberá realizáciou navrhnutého riešenia. Popisuje použité softvérové nástroje a knižnice, konfiguráciu zvoleného modelu YOLO (špecifikovanej verzie), nastavenie tréningových parametrov a samotný priebeh tréningových experimentov na troch pripravených variantoch dátovej sady. Záver kapitoly zahŕňa metriky použité na hodnotenie výkonnosti modelu.
+
+Kapitola Výsledky a diskusia prezentuje výsledky dosiahnuté počas experimentačnej fázy. Zahŕňa vyhodnotenia výkonnosti modelu na pôvodnom, binarizovanom a augmentovanom datasete pomocou zvolených metrík. Výsledky sú porovnané, diskutuje sa vplyv predspracovania a augmentácie na presnosť segmentácie a je vykonaná kvalitatívna analýza úspešných aj problematických prípadov segmentácie. Kapitola tiež identifikuje limity navrhnutého riešenia a navrhuje možné zmeny pre jeho ďalšie vylepšenie.
+
+Kapitola Záver sumarizuje zistenia a dosiahnuté výsledky práce vo vzťahu k stanoveným cieľom. Hodnotí prínos práce k automatizácii práce s rukou písanými dokumentami a navrhuje možné zmeny pre následné pokroky výskumu v danej oblasti.

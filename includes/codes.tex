@@ -1,0 +1,232 @@
+\begin{lstlisting}[
+  caption={Trénovanie YOLO11},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+import gc
+import torch
+from ultralytics import YOLO
+
+# Context manager for YOLO model to ensure proper cleanup
+class YOLOModel:
+    def __init__(self, model_path):
+        self.model_path = model_path
+        self.model = None
+
+    def __enter__(self):
+        self.model = YOLO(self.model_path)
+        return self.model
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        del self.model
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        return False  # Don't suppress exceptions
+
+# --- Update these paths as needed ---
+MODEL_PATH = "yolo11x.pt"  # alebo "yolo11x.pt", "yolo11n.pt", etc.
+DATASET_YAML = "dataset/YOLODataset/dataset.yaml"
+
+def main():
+    # Train the model using the context manager
+    with YOLOModel(MODEL_PATH) as model:
+        results = model.train(
+            data=DATASET_YAML,
+            epochs=100,
+            imgsz=640,
+            batch=8,
+            cache=False,
+            workers=0,
+            device=0
+        )
+    # Optional cleanup (redundant, but safe)
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
+if __name__ == "__main__":
+    main()
+
+\end{lstlisting}
+\begin{lstlisting}[
+  caption={Detekcia vviacerých obrázkov},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+import os
+import cv2
+import numpy as np
+from ultralytics import YOLO
+
+# Paths
+MODEL_PATH = "RegularNEW100epchSmall/weights/best.pt" #cesta k váham
+INPUT_FOLDER = "dataset/YOLODataset/images/val" #cesta k input folderu s obrazkami
+OUTPUT_FOLDER = "val X" #cesta k output folderu
+
+# Supported image extensions
+VALID_EXTENSIONS = (".jpg", ".jpeg", ".png")
+
+# Create the output folder if it doesn't exist
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
+# Load the YOLO model
+model = YOLO(MODEL_PATH)
+
+def is_image_file(filename):
+    return filename.lower().endswith(VALID_EXTENSIONS)
+
+def process_image(input_path, output_path):
+    # Read the image
+    image = cv2.imread(input_path)
+    if image is None:
+        print(f"Warning: Could not read {input_path}")
+        return
+
+    # Run YOLO prediction
+    results = model.predict(image, save=False)
+
+    # Annotate the image
+    annotated_pil = results[0].plot(font_size=60, pil=True)
+    annotated_bgr = cv2.cvtColor(np.array(annotated_pil), cv2.COLOR_RGB2BGR)
+
+    # Save the annotated image
+    cv2.imwrite(output_path, annotated_bgr)
+    print(f"Processed: {os.path.basename(input_path)}")
+
+def main():
+    for filename in os.listdir(INPUT_FOLDER):
+        if is_image_file(filename):
+            input_path = os.path.join(INPUT_FOLDER, filename)
+            output_path = os.path.join(OUTPUT_FOLDER, filename)
+            process_image(input_path, output_path)
+
+if __name__ == "__main__":
+    main()
+\end{lstlisting}
+
+\begin{lstlisting}[
+  caption={Kód použitý pre binarizáciu a augmentáciu datasetu},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+
+import os
+import cv2
+import albumentations as A
+import shutil
+
+# === Setup Paths ===
+ORIGINAL_DATASET = "dataset/YOLODataset"
+BINARIZED_DATASET = "dataset/YOLODataset_binarized"
+AUGMENTED_DATASET = "dataset/YOLODataset_augmented"
+
+# === Augmentation Pipeline ===
+augment = A.Compose([
+    A.HorizontalFlip(p=0.5),
+    A.VerticalFlip(p=0.3),
+    A.RandomBrightnessContrast(p=0.5),
+    A.Rotate(limit=30, p=0.5),
+])
+
+def make_dirs(base_dir):
+    """Create images/train, images/val, labels/train, labels/val folders."""
+    for subset in ["train", "val"]:
+        os.makedirs(os.path.join(base_dir, "images", subset), exist_ok=True)
+        os.makedirs(os.path.join(base_dir, "labels", subset), exist_ok=True)
+
+# === Copy YAML file to new datasets ===
+os.makedirs(BINARIZED_DATASET, exist_ok=True)
+os.makedirs(AUGMENTED_DATASET, exist_ok=True)
+shutil.copy(os.path.join(ORIGINAL_DATASET, "dataset.yaml"), BINARIZED_DATASET)
+shutil.copy(os.path.join(ORIGINAL_DATASET, "dataset.yaml"), AUGMENTED_DATASET)
+
+make_dirs(BINARIZED_DATASET)
+make_dirs(AUGMENTED_DATASET)
+
+def process_dataset(src_path, dst_bin_path, dst_aug_path):
+    """Process images: binarize and augment, copy labels."""
+    for subset in ["train", "val"]:
+        src_img_dir = os.path.join(src_path, "images", subset)
+        src_lbl_dir = os.path.join(src_path, "labels", subset)
+
+        bin_img_dir = os.path.join(dst_bin_path, "images", subset)
+        bin_lbl_dir = os.path.join(dst_bin_path, "labels", subset)
+        aug_img_dir = os.path.join(dst_aug_path, "images", subset)
+        aug_lbl_dir = os.path.join(dst_aug_path, "labels", subset)
+
+        if not os.path.exists(src_img_dir):
+            print(f"Folder not found: {src_img_dir}")
+            continue
+
+        for img_file in os.listdir(src_img_dir):
+            img_path = os.path.join(src_img_dir, img_file)
+            lbl_path = os.path.join(src_lbl_dir, os.path.splitext(img_file)[0] + ".txt")
+
+            if not os.path.exists(lbl_path):
+                print(f"Label not found for {img_file}, skipping.")
+                continue
+
+            # === Read original image ===
+            image = cv2.imread(img_path)
+            if image is None:
+                print(f"Could not read image: {img_path}, skipping.")
+                continue
+
+            # === 1. Binarize ===
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            _, bin_image = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+            bin_image = cv2.cvtColor(bin_image, cv2.COLOR_GRAY2BGR)
+            cv2.imwrite(os.path.join(bin_img_dir, img_file), bin_image)
+            shutil.copy(lbl_path, os.path.join(bin_lbl_dir, os.path.basename(lbl_path)))
+
+            # === 2. Augment ===
+            transformed = augment(image=image)
+            aug_image = transformed['image']
+            cv2.imwrite(os.path.join(aug_img_dir, img_file), aug_image)
+            shutil.copy(lbl_path, os.path.join(aug_lbl_dir, os.path.basename(lbl_path)))
+
+if __name__ == "__main__":
+    process_dataset(ORIGINAL_DATASET, BINARIZED_DATASET, AUGMENTED_DATASET)
+    print("Datasets created: binarized and augmented.")
+
+\end{lstlisting}
+
+\begin{lstlisting}[
+  caption={Kód ppre spočítanie labelov pre štatistiku},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+import os
+import json
+from collections import defaultdict
+
+def print_all_labels(json_dir):
+# Dictionary to hold label counts
+    label_counts = defaultdict(int)
+    # Iterate over all JSON files in the directory
+    for json_file in os.listdir(json_dir):
+        if json_file.endswith(".json"):
+            json_path = os.path.join(json_dir, json_file)
+            with open(json_path, "r") as f:
+                data = json.load(f)
+            # Extract labels from the JSON file
+            for shape in data.get("shapes", []):
+                label = shape.get("label", "no-label")
+                label_counts[label] += 1
+    return label_counts
+
+# Directory containing the JSON files
+json_dir = "dataset/img:json"
+# Find labels and their counts
+labels = print_all_labels(json_dir)
+# Print results
+print("Labels and their counts:")
+for label, count in labels.items():
+    print(f"{label}: {count}")
+
+\end{lstlisting}

@@ -1,0 +1,165 @@
+\babel@toc {slovak}{}\relax 
+\thispagestyle {plain}
+\contentsline {section}{\'{U}vod}{1}{section*.2}%
+\contentsline {paragraph}{Motivácia a význam práce}{1}{section*.2}%
+\contentsline {paragraph}{Ciele práce}{1}{section*.2}%
+\contentsline {paragraph}{Štruktúra práce}{2}{section*.2}%
+\contentsline {section}{\numberline {1}Teoretické východiská}{4}{section.3}%
+\contentsline {subsection}{\numberline {1.1}Historické substitučné šifry}{4}{subsection.4}%
+\contentsline {subsubsection}{\numberline {1.1.1}Substitučná šifra}{4}{subsubsection.5}%
+\contentsline {subsubsection}{\numberline {1.1.2}Jednoduchá substitučná šifra}{4}{subsubsection.6}%
+\contentsline {subsubsection}{\numberline {1.1.3}Homofónna substitučná šifra}{4}{subsubsection.7}%
+\contentsline {subsubsection}{\numberline {1.1.4}Nomenklátory}{4}{subsubsection.8}%
+\contentsline {paragraph}{Typy substitučných podsystémov v nomenklátoroch (písmená, n-gramy, klamáče, kódy)}{5}{figure.caption.9}%
+\contentsline {paragraph}{Grafické usporiadanie a vizuálne štruktúry nomenklátorových kľúčov na papieri}{6}{table.caption.10}%
+\contentsline {subsection}{\numberline {1.2}Umelá inteligencia pre porozumenie rukou písaných dokumentov}{6}{subsection.11}%
+\contentsline {subsubsection}{\numberline {1.2.1}Spracovanie obrazu a predikcia v dokumentoch}{6}{subsubsection.12}%
+\contentsline {subsubsection}{\numberline {1.2.2}Strojové učenie a hlboké učenie v analýze dokumentov}{6}{subsubsection.13}%
+\contentsline {subsubsection}{\numberline {1.2.3}Detekcia objektov v obraze}{6}{subsubsection.14}%
+\contentsline {subsubsection}{\numberline {1.2.4}Princípy detekcie objektov}{7}{subsubsection.15}%
+\contentsline {paragraph}{Konvolučné neurónové siete (CNN) pre detekciu objektov}{7}{subsubsection.15}%
+\contentsline {subsubsection}{\numberline {1.2.5}Špecifiká spracovania rukou písaného textu}{7}{subsubsection.16}%
+\contentsline {section}{\numberline {2}Analýza súčasného stavu a návrh riešenia}{8}{section.17}%
+\contentsline {subsection}{\numberline {2.1}Prehľad existujúcich prístupov k segmentácii dokumentov}{8}{subsection.18}%
+\contentsline {subsubsection}{\numberline {2.1.1}Tradičné metódy (napr. založené na pravidlách, projekčných profiloch)}{8}{subsubsection.19}%
+\contentsline {subsubsection}{\numberline {2.1.2}Metódy založené na strojovom učení a hlbokom učení}{8}{subsubsection.20}%
+\contentsline {subsection}{\numberline {2.2}Prehľad využitia AI pri analýze historických dokumentov a šifier}{9}{subsection.21}%
+\contentsline {subsection}{\numberline {2.3}Voľba technológie pre detekciu}{9}{subsection.22}%
+\contentsline {subsubsection}{\numberline {2.3.1}Zdôvodnenie výberu YOLO (You Only Look Once)}{9}{subsubsection.23}%
+\contentsline {subsubsection}{\numberline {2.3.2}Predstavenie architektúry YOLO11}{10}{subsubsection.24}%
+\contentsline {subsection}{\numberline {2.4}Navrhovaný systém detekcie}{10}{subsection.25}%
+\contentsline {section}{\numberline {3}Príprava dátovej sady (Datasetu)}{11}{section.26}%
+\contentsline {subsection}{\numberline {3.1}Zdroj a charakteristika dát}{11}{subsection.27}%
+\contentsline {subsection}{\numberline {3.2}Popis dátovej sady}{11}{subsection.28}%
+\contentsline {subsection}{\numberline {3.3}Anotácia dát}{12}{subsection.29}%
+\contentsline {subsubsection}{\numberline {3.3.1}Definovanie tried pre segmentáciu}{12}{subsubsection.30}%
+\contentsline {subsubsection}{\numberline {3.3.2}Proces a nástroje anotácie}{14}{subsubsection.33}%
+\contentsline {subsection}{\numberline {3.4}Rozdelenie dátovej sady}{14}{subsection.34}%
+\contentsline {subsection}{\numberline {3.5}Predspracovanie a augmentácia dát}{14}{subsection.35}%
+\contentsline {subsubsection}{\numberline {3.5.1}Pôvodná podoba datasetu}{14}{subsubsection.36}%
+\contentsline {subsubsection}{\numberline {3.5.2}Binarizácia dát}{15}{subsubsection.37}%
+\contentsline {subsubsection}{\numberline {3.5.3}Augmentácia dát}{15}{subsubsection.38}%
+\contentsline {section}{\numberline {4}Implementácia a experimenty}{16}{section.39}%
+\contentsline {subsection}{\numberline {4.1}Použité nástroje a prostredie}{16}{subsection.40}%
+\contentsline {subsection}{\numberline {4.2}Konfigurácia modelu YOLOv11}{17}{subsection.41}%
+\contentsline {subsection}{\numberline {4.3}Tréningové parametre}{17}{subsection.42}%
+\contentsline {subsection}{\numberline {4.4}Priebeh tréningu}{17}{subsection.43}%
+\contentsline {subsubsection}{\numberline {4.4.1}Tréning na pôvodnom datasete}{17}{subsubsection.44}%
+\contentsline {subsubsection}{\numberline {4.4.2}Tréning na binarizovanom datasete}{18}{subsubsection.46}%
+\contentsline {subsubsection}{\numberline {4.4.3}Tréning na augmentovanom datasete}{20}{subsubsection.49}%
+\contentsline {subsection}{\numberline {4.5}Metriky hodnotenia}{21}{subsection.51}%
+\contentsline {section}{\numberline {5}Výsledky a diskusia}{23}{section.52}%
+\contentsline {subsection}{\numberline {5.1}Prezentácia výsledkov tréningu}{23}{subsection.53}%
+\contentsline {subsubsection}{\numberline {5.1.1}Výsledky modelu trénovaného na pôvodnom datasete}{23}{subsubsection.54}%
+\contentsline {subsubsection}{\numberline {5.1.2}Výsledky modelu trénovaného na binarizovanom datasete}{25}{subsubsection.58}%
+\contentsline {subsubsection}{\numberline {5.1.3}Výsledky modelu trénovaného na augmentovanom datasete}{26}{subsubsection.61}%
+\contentsline {subsection}{\numberline {5.2}Porovnanie výkonnosti modelov}{27}{subsection.64}%
+\contentsline {subsection}{\numberline {5.3}Analýza vplyvu predspracovania a augmentácie}{27}{subsection.66}%
+\contentsline {subsubsection}{\numberline {5.3.1}Vplyv binarizácie na presnosť detekcie}{27}{subsubsection.67}%
+\contentsline {subsubsection}{\numberline {5.3.2}Vplyv augmentácie na robustnosť a generalizáciu modelu}{28}{subsubsection.69}%
+\contentsline {subsection}{\numberline {5.4}Kvalitatívna analýza výsledkov}{28}{subsection.71}%
+\contentsline {subsection}{\numberline {5.5}Diskusia}{29}{subsection.74}%
+\contentsline {subsection}{\numberline {5.6}Návrhy na možné vylepšenia}{30}{subsection.75}%
+\contentsline {section}{Z\'{a}ver}{31}{section*.76}%
+\contentsline {paragraph}{Zhrnutie dosiahnutých výsledkov}{31}{section*.76}%
+\contentsline {paragraph}{Prínos práce}{31}{section*.76}%
+\contentsline {paragraph}{Možnosti ďalšieho výskumu}{31}{section*.76}%
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{32}{section*.77}%
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.78}%
+\contentsline {section}{\numberline {A}Použitie umelej inteligencie}{II}{section.80}%
+\contentsline {section}{\numberline {B}Ukážka datasetu}{III}{section.83}%
+\contentsline {section}{\numberline {C}{Detailnejšie grafy alebo tabuľky}}{V}{section.89}%
+\contentsline {section}{\numberline {D}Dôležité časti kódu}{VIII}{section.97}%
+\contentsline {section}{\numberline {E}Technická príručka}{XIV}{section.306}%
+\contentsline {paragraph}{Požiadavky na prostredie}{XIV}{priloh.307}%
+\contentsline {paragraph}{Použitie natrénovaných váh YOLO}{XIV}{lstnumber.310}%

@@ -1,0 +1,553 @@
+\section{Teoretické východiská}
+    \subsection{Historické substitučné šifry}
+        \subsubsection{Substitučná šifra}
+        Substitučné šifry nahradzujú každé písmeno abecedy jedným pevným zástupcom, pričom delenie slov zostáva nezmenené. Každý znak šifrovaného textu je priradený pravdepodobnosti, že reprezentuje konkrétne písmeno otvoreného textu, pričom tieto pravdepodobnosti sa aktualizujú na základe spoločných výskytov písmen.\cite{ritter1990substitution}
+        
+        \subsubsection{Jednoduchá substitučná šifra}
+        Jednoduché substitučné šifry patria medzi šifrovacie metódy, v ktorých je každé písmeno otvoreného textu nahradené pevným písmenom šifrového textu, pričom medzery medzi slovami zostávajú zachované. Tento typ šifier sa často vyskytuje v novinových hlavolamoch a lúštiteľských úlohách.\cite{olson2007robust} 
+        
+        Príklad šifry:
+        
+            \begin{verbatim}
+                Pôvodná správa: abcdefghijklmnopqrstuvwxyz
+                Šifrovaná správa: qjzvukbymwphgxtlscnrfdoaie
+            \end{verbatim}
+        \subsubsection{Homofónna substitučná šifra}
+        Homofónna substitučná šifra je typ substitučnej šifry, v ktorej môže mať každý znak otvoreného textu viacero rôznych šifrových reprezentácií. Počet možných náhrad je často úmerný frekvencii daného znaku v jazyku, čím sa vyrovnávajú frekvencie symbolov v šifrovanom texte a znižuje sa účinnosť frekvenčnej analýzy. Táto technika premieňa otvorený text na zdanlivo náhodnú sekvenciu znakov.\cite{vatsa2012novel}
+        \subsubsection{Nomenklátory}
+            Nomenklátor je historický šifrovací systém, ktorý kombinuje jednoduchú substitúciu znakov s kódovými slovami alebo symbolmi pre celé slová, mená či frázy. Tento typ šifry bol široko používaný v diplomatickej a vojenskej korešpondencii od 15. do 19. storočia, pričom často obsahoval aj špeciálne znaky pre zmätenie nepriateľa a klamné symboly\cite{kahn1996codebreakers}.
+            \newline
+            \newline
+            
+            
+            Typický nomenklátor obsahoval:
+            \begin{itemize}
+                \item Jednoduchú substitúciu pre jednotlivé znaky
+                \item Kódové slová pre mená a frázy
+                \item Systém klamavých znakov
+            \end{itemize}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.95\textwidth]{img/img7.png}
+                \caption{Ukážka nomeklátoru, z knihy \newline Francesco Tranchedino: Secret Diplomatic Documents \cite{tranchedino2011secret}, ktorý sa nachádza aj v datasete}
+                \label{fig:img7}
+            \end{figure}
+            \paragraph{Typy substitučných podsystémov v nomenklátoroch (písmená, n-gramy, klamáče, kódy)}
+            .
+            \begin{table}[H]
+                \centering
+                \begin{tabular}{
+                    >{\raggedright\arraybackslash}p{3cm} 
+                    >{\raggedright\arraybackslash}p{5cm} 
+                    >{\raggedright\arraybackslash}p{4cm}
+                }
+                    \toprule
+                    \textbf{Typ} & \textbf{Charakteristika} & \textbf{Príklad} \\
+                    \midrule
+                    Písmená & Jednoduchá náhrada znakov & A~$\rightarrow$~X \\
+                    N-gramy & Náhrada skupín znakov & TH~$\rightarrow$~WQ \\
+                    Klamáče & Falošné znaky bez významu & *~$\rightarrow$~\ddag \\
+                    Kódy & Slovné substitúcie & "Kráľ"~$\rightarrow$~"Z42" \\
+                    \bottomrule
+                \end{tabular}
+                \caption{Typy substitúcií v nomenklátoroch}
+            \end{table}
+        
+            \paragraph{Grafické usporiadanie a vizuálne štruktúry nomenklátorových kľúčov na papieri}
+            
+            Kľúče boli vizuálne štrukturované do tabuliek s:
+            \begin{itemize}
+                \item Vertikálnym usporiadaním pôvodných znakov
+                \item Horizontálnymi riadkami pre šifrové ekvivalenty
+                \item Farebným kódovaním pre rýchlu orientáciu
+            \end{itemize}
+    \subsection{Umelá inteligencia pre porozumenie rukou písaných dokumentov}
+        \subsubsection{Spracovanie obrazu a predikcia v dokumentoch}
+        Moderné prístupy využívajú:
+        \begin{itemize}
+            \item Adaptívny thresholding (prispôsobenie jasových hodnôt) \cite{otsu1979threshold}
+            \item Eróziu/diláciu pre redukciu šumu \cite{vincent1993morphological}
+            \item GPU akceleráciu transformácií \cite{cohen2016gpu}
+        \end{itemize}
+        \subsubsection{Strojové učenie a hlboké učenie v analýze dokumentov}
+        Transformátorové modely (RoBERTa) dosahujú 95.87\% presnosť v klasifikácii dokumentov. \cite{liu2019roberta} Multi-task learning kombinuje:
+        \begin{itemize}
+            \item Detekciu čitateľského poriadku
+            \item Kategorizáciu layout sekcií
+            \item Generovanie textových sekvencií
+        \end{itemize}
+        Tieto úlohy sú dôližité pri digitalizácii a analýze historických šifrovacích kľúčov, kde je potrebné nielen rozpoznať text, ale aj pochopiť jeho štruktúru a významové vzťahy \cite{liu2019roberta, xu2020layoutlm}.
+        \subsubsection{Detekcia objektov v obraze}
+            Detekcia objektov je kľúčová v oblasti počítačového videnia, ktorá pracuje na lokalizácii a identifikácii objektov v obrázkoch. Na rozdiel od segmentácie, ktorá rozdeľuje obraz na oblasti podľa triedy alebo podľa jednotlivých objektov, detekcia objektov označuje objekty pomocou ohraničujúcich rámčekov a priraďuje im triedu. V oblasti spracovania dokumentov sa detekcia používa na nájdenie blokov textu, hlavičiek, podpisov alebo pečiatok.
+        \subsubsection{Princípy detekcie objektov}
+        Moderné nástroje detekcie objektov využívajú hlboké neurónové siete. Tie sa dokážu
+        sústrediť na relevantné vlastnosti obrázku a lokalizovať v ňom objekty. Detekcia objektov
+        zvyčajne zahŕňa dva hlavné kroky: lokalizácia – určenie polohy objektov v obraze pomocou
+        ohraničujúcich rámčekov; klasifikácia – priradenie správnej triedy každému detegovanému
+        objektu. Klasické algoritmy, ako Viola-Jones, boli nahradené hlbokými modelmi, ktoré
+        dosahujú vyššiu presnosť a robustnosť aj pri nekvalitnom osvetlení, šume či deformáciách
+        dokumentov \cite{redmon2016yolo, ren2015faster}. 
+
+            \paragraph{Konvolučné neurónové siete (CNN) pre detekciu objektov}
+            tvoria základ väčšiny moderných detekčných architektúr. Využívajú sa na extrakciu črt z obrázkov a následnú predikciu pozícií a tried objektov. Medzi najznámejšie architektúry patria napríklad:
+            \begin{itemize}
+                \item R-CNN a jeho varianty (Fast R-CNN, Faster R-CNN) \cite{girshick2014rcnn}
+                \item YOLO (You Only Look Once) \cite{redmon2016yolo}
+                \item SSD (Single Shot MultiBox Detector) \cite{liu2016ssd}
+            \end{itemize}
+        \subsubsection{Špecifiká spracovania rukou písaného textu}
+        Rukou písaný text je pre umelú inteligenciu veľkou výzvou v porovnaní so strojovo tlačený písmom. Každý človek píše inak – niekto má písmo uhladené, iný nečitateľné, niekto píše veľkými písmenami, ďalší píše kurzívou. Táto obrovská odlišnosť štýlov spôsobuje, že aj pre moderné AI systémy je rozpoznávanie rukopisov náročné.
+        Ďalším problémom je, že znaky v rukopise často splývajú, najmä pri písaní kurzívou. Písmená môžu byť prepojené, čo sťažuje rozlíšenie, kde jedno písmeno končí a druhé začína. Ak je navyše text písaný nahusto alebo nepresne, systémy majú problém správne rozpoznať jednotlivé znaky.
+        Rukou písané dokumenty sú často poškodené. Poškodenia obrázkov, ako napríklad škvrny alebo rozmazanosť, výrazne znižujú presnosť rozpoznávania.
+        Napriek týmto prekážkam sa vďaka pokročilým technológiám presnosť rozpoznávania rukopisu stále zlepšuje, čo môže pomôcť pri digitalizácii historických archívov alebo rýchlejšiemu spracovaniu údajov.
+
+\section{Analýza súčasného stavu a návrh riešenia}
+Táto kapitola sa venuje analýze existujúcich prístupov k segmentácii a detekcii komponentov v historických rukou písaných šifrovacích kľúčoch. Najskôr so zameraním na tradičné aj moderné metódy segmentácie dokumentov, následne využitie umelej inteligencie pri analýze historických dokumentov a šifier. Na základe tejto analýzy je zdôvodnený výber konkrétnej detekčnej architektúry a navrhnutý systém, ktorý je optimalizovaný pre potreby nášho spracovania historických šifrovacích kľúčov. 
+
+    \subsection{Prehľad existujúcich prístupov k segmentácii dokumentov}
+    Detekcia prvkov dokumentov je dôležitým krokom pri spracovaní historických rukopisov a šifrovacích kľúčov. Táto sekcia sa zameriava  na tradičné a moderné prístupy, ktoré sa používajú na rozdelenie dokumentov na jednotlivé časti. Následne zhodnotíme ich výhody a obmedzenia v kontexte historických dát.
+    
+        \subsubsection{Tradičné metódy (napr. založené na pravidlách, projekčných profiloch)}
+        Tradičné metódy detekcie a segmentácie dokumentov sú základom automatizovaného spracovania obrazových dát. Tieto prístupy často využívajú jednoduché pravidlá, ako je detekcia okrajov, prahovanie, morfologické operácie alebo projekčné profily. Projekčný profil analyzuje rozloženie pixelov v riadkoch a stĺpcoch. To umožňuje identifikovať textové riadky alebo stĺpce v historických dokumentoch. Pravidlové metódy sú rýchle a výpočtovo nenáročné, no ich presnosť výrazne klesá pri zložitejších alebo poškodených dokumentoch, kde je veľká variabilita písma, šum alebo poškodenie papiera.\cite{likforman2017text, casey1996survey}
+        \subsubsection{Metódy založené na strojovom učení a hlbokom učení}
+        S rozvojom strojového a hlbokého učenia sa segmentácia a detekcia dokumentov posúva na novú úroveň. Konvolučné neurónové siete (CNN) dokážu automaticky extrahovať zložité črty z obrázkov a efektívne rozlíšiť rôzne komponenty dokumentov, ako sú textové bloky, tabuľky alebo špecifické znaky šifrovacích kľúčov \cite{oliveira2018dhsegment, xu2020layoutlm}. Hlboké učenie umožňuje modelom učiť sa priamo z veľkého množstva označených historických dát a adaptovať sa na rôzne štýly písma a štruktúry dokumentov \cite{simistira2017icdar, zhai2019deep}. Významným prínosom je aj možnosť trénovať modely na syntetických dátach, ktorými sú umelo generované údaje napodobňujúce charakteristiky a vzory reálnych údajov, čo zvyšuje ich odolnosť voči šumu a degradácii \cite{wigington2018start}.
+    \subsection{Prehľad využitia AI pri analýze historických dokumentov a šifier}
+    Umelá inteligencia sa dnes využíva na analýzu a spracovanie historických dokumentov vrátane šifrovacích kľúčov. Platformy ako Transkribus umožňujú automatickú transkripciu rukou písaných textov pomocou pokročilých modelov založených na rekurentných a konvolučných neurónových sieťach \cite{michael2018transkribus}. Tieto nástroje dokážu rozpoznať aj veľmi špecifické písma, adaptovať sa na rôzne jazyky a zvládnuť aj poškodené alebo neúplné zápisy. AI sa využíva nielen na rozpoznávanie samotného textu, ale aj na analýzu rozloženia stránky, detekciu prvkov, ako sú tabuľky, symboly alebo špecifické znaky kľúčov \cite{gruning2019read}. Moderné AI systémy tak značne urýchľujú a spresňujú výskum historických šifier a umožňujú efektívnu digitalizáciu archívov.
+    \subsection{Voľba technológie pre detekciu}
+    Pri výbere technológie pre detekciu častí historických rukou písaných šifrovacích kľúčov je potrebné zohľadniť rozličné druhy písma, prítomnosť šumu a potrebu detegovať rozličné objekty. Moderné detekčné architektúry založené na hlbokom učení, ako YOLO (You Only Look Once)\cite{redmon2016yolo}, ponúkajú vysokú presnosť pri spracovaní rôznych typov dát. YOLO je vhodné pre lokalizáciu a zaradenie viacero objektov rôznych veľkostí v jednom kroku.
+        \subsubsection{Zdôvodnenie výberu YOLO (You Only Look Once)}
+        YOLO je jedným z najefektívnejších detekčných algoritmov v oblasti počítačového videnia. Hlavnou výhodou YOLO je schopnosť spracovať celý obraz naraz, čo výrazne zrýchľuje detekciu objektov. Algoritmus rozdeľuje obraz na mriežku a v každej bunke predikuje ohraničujúce obdĺžniky (bounding boxes) a pravdepodobnosti tried. Vďaka tomu dokáže detegovať aj malé objekty a je robustný voči rôznym šumom a deformáciám, čo je pri historických rukopisoch veľmi dôležité. YOLO je dobre dokumentované a existuje množstvo implementácií a predtrénovaných modelov, čo urýchľuje vývoj a testovanie. \cite{redmon2016yolo}
+        \subsubsection{Predstavenie architektúry YOLO11}
+        YOLO11 je v čase písania najnovšia generácia YOLO architektúry. Prináša ďalšie vylepšenia v presnosti, rýchlosti a efektivite spracovania. Vychádza z plne konvolučnej siete, kde základom je extraktor príznakov (Darknet-53 vo verzii YOLOv3, v novších verziách vylepšený backbone)\cite{redmon2018yolov3}. YOLO11 využíva pokročilé techniky:
+        \begin{itemize}
+            \item viacúrovňové feature fusion - spájanie malých prvkov z viacerých vrstiev do jedného
+            \item vylepšené mechanizmy pre detekciu malých objektov
+        \end{itemize}
+        Vďaka tomu je vhodný aj na detekciu malých detailov v historických rukou písaných dokumentoch, kde je potrebné rozlišovať medzi rôznymi typmi znakov, symbolov a štruktúr.
+    \subsection{Navrhovaný systém detekcie}
+    Navrhovaný systém detekcie komponentov historických rukou písaných šifrovacích kľúčov je postavený na architektúre YOLO11. Dataset pozostáva z kľučov, ktorých časti sú označené:
+    \begin{itemize}
+        \item key-nomen-title
+        \item key-nomen-page-number
+        \item page-number
+        \item key-nomen-horizontal-pairs
+        \item key-nomen-vertical-pairs
+        \item key-nomen-nulls
+        \item key-nomen-letters
+        \item key-nomen-date
+        \item key-nomen
+        \item key-nomen-no-category
+        \item key-nomen-unknown
+    \end{itemize}
+    YOLO11 sa natrénuje na datasete. Výstupom sú váhy, ktoré sa dajú využiť pre identifikovanie a klasifikáciu obrázkov predstavujúce rovnakú problematiku. Tento prístup umožňuje efektívne spracovanie, automatizuje identifikáciu šifrovacích prvkov a výrazne zjednodušuje ďalšie kroky spracovania historických rukou písaných šifrovacích kľúčov.
+
+\section{Príprava dátovej sady (Datasetu)}
+Príprava kvalitného datasetu predstavuje dôležitý krok v úspešnom vývoji systému umelej inteligencie pre detekciu historických rukou písaných šifrovacích kľúčov. Táto kapitola detailne opisuje proces zhromažďovania a spracovania dát potrebných na trénovanie modelov hlbokého učenia. Osobitná pozornosť je venovaná špecifikám nomenklátorových šifier a ich charakteristikám. Tie tvoria základ pre definovanie tried pre detekciu. Proces anotácie je navrhnutý tak, aby zachytil štruktúru týchto jednotlivých tried. 
+    \subsection{Zdroj a charakteristika dát}
+    Zdrojom dát pre túto prácu sú historické rukou písané nomenklátorové šifrovacie kľúče pochádzajúce z knihy Francesco Tranchedino: Secret Diplomatic Documents \cite{tranchedino2011secret}. Tieto dokumenty predstavujú jedinečnú kategóriu kryptografických materiálov, ktoré kombinujú viacero substitučných mechanizmov v jednom dokumente. Nomenklátor ako rozšírená verzia jednoduchej substitučnej homofónnej šifry umožňuje využitie substitúcie jednotlivých písmen, n-gramov, klamáčov a špeciálnych kódov pre slová.
+    
+    Charakteristickou črtou týchto dokumentov je ich vizuálna štruktúra, kde jednotlivé substitučné podsystémy sú graficky oddelené a organizované do tabuľkových formátov. Substitúcie písmen sú typicky usporiadané do pravidelných mriežok, n-gramy do tabuliek, zatiaľ čo kódy pre celé slová môžu byť organizované vo formáte slovníka. Historické dokumenty tohto typu vykazujú značnú variabilitu v rukopise, kvalite papiera a stave zachovania, čo predstavuje výzvu pre spracovanie.
+    
+    Digitalizácia týchto dokumentov bola realizovaná vysokorozlišovacím skenovaním. Celková kolekcia zahŕňa dokumenty v rôznych jazykoch, predovšetkým taliančine ,latinčine a môže sa v nej nachádzať terminológia z turečtiny, gréčtiny alebo slovanských jazykov čo odráža diplomatickú prax daného obdobia.
+    \subsection{Popis dátovej sady}
+    Finálna dátová sada obsahuje 169 digitalizovaných strán historických nomenklátorových šifrovacích kľúčov, pričom každá strana predstavuje samostatnú jednotku pre detekciu. Priemerná veľkosť jednotlivého obrazu je 1800 x 2700 pixelov, čo umožňuje zachytenie jemných detailov rukou písaných dokumentov pre presné rozpoznávanie hraníc medzi jednotlivými časťami.
+    Dátová sada je charakterizovaná značnou heterogenitou vo vizuálnom usporiadaní dokumentov. Dokumenty obsahujú všetky štyri hlavné typy substitučných podsystémov, ktorými sú písmená, n-gramy, klamáče a kódy. Táto variabilita je zámerná, pretože odráža historickú realitu používania týchto šifier v praxi.
+    Kvalita dokumentov sa pohybuje od výborne zachovaných exemplárov s čitateľným rukopisom až po degradované materiály s presvítajucími stranami. Keďže ide o sken, model YOLO sa bude musieť pri trénovaní vysporiadať s týmito nedostatkami.
+    \subsection{Anotácia dát}
+        \subsubsection{Definovanie tried pre segmentáciu}
+        Pre potrebu detekcie častí nomenklátorových šifrovacích kľúčov bolo definovaných jedenásť hlavných tried, ktoré zachytávajú všetky relevantné komponenty týchto historických dokumentov.
+
+        Trieda "key-nomen" predstavuje ohraničenie celku, v ktorom sa nachádzajú jednotlivé časti kľúča. Všetky triedy, okrem "page-number", sa nachádzajú v rámci tejto triedy.. 
+        
+        Trieda "key-nomen-title" zachytáva textové označenia jednotlivých sekcií. Tieto sekcie majú podobnú charakteristiku.        
+        
+        Trieda "key-nomen-page-number" predstavuje sekcie venované číslam strán, ktorými sú očíslované kľúče v skenoch.
+
+        Trieda "page-number" obsahuje čísla strán, ktoré sú ako jediné zaznamenané tlačeným písmom.
+        
+        Trieda "key-nomen-letters" zahŕňa oblasti obsahujúce substitučné tabuľky pre jednotlivé písmená abecedy, typicky organizované do pravidelných mriežok s pôvodným písmenom a jeho šifrovacím symbolom.
+
+        Trieda "key-nomen-nulls" predstavuje sekcie venované klamačom, ktoré neobsahujú substitúcie. Ich úlohou je dešifrovanie bez kľuča znemožniť.
+        
+        Trieda "key-vertical-pairs" predstavuje sekcie venované dvojiciam a trojiciam písmen, ktoré sú usporiadané spôsobom, že ich substitučná časť sa nachádza pod nimi.
+        
+        Trieda "key-horizontal-pairs" predstavuje sekcie venované dvojiciam a trojiciam písmen, ktoré sú usporiadané spôsobom, že ich substitučná časť sa nachádza vedľa. Toto usporiadanie pripomína slovník.
+        
+        Trieda "key-nomen-date" zahŕňa časti dokumentu kde je spomínaný dátum. Táto trieda sa ľudskému oku rozlíši ľahko ale v kombinácii s kurzívou stroj potrebuje trénovať identifikáciu aby nenastal omyl.  
+        
+        Ďalej bola definovaná trieda "key-nomen-no-category" pre prvky, ktoré nespadali do žiadnej kategórie. 
+        
+        Poslednou triedou je "key-nomen-no-category", re prvky, ktoré nespadali do žiadnej kategórie a nebolo možné ich charakterizovať.
+        
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.95\textwidth]{img/nomen-anot}
+                \caption{Ukážka obrázku z datasetu}
+                \label{fig:nomen}
+            \end{figure}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.95\textwidth]{img/labels.png}
+                \caption{Legenda k označeniu sekcií}
+                \label{fig:labels}
+            \end{figure}
+        
+        \subsubsection{Proces a nástroje anotácie}
+        Anotačný proces bol realizovaný pomocou špecializovaného nástroja labelme, ktorý umožňuje presné vymedzenie polygonálnych oblastí na dokumentoch a ich kategorizáciu podľa definovaných tried.
+        
+        Anotácia bola vykonávaná ručne. Každý dokument bol nezávisle anotovaný s následnou konzultáciou. Tento prístup zabezpečil vysokú kvalitu a spoľahlivosť anotácií, čo je kritické pre úspešné trénovanie modelov umelej inteligencie.
+        
+        Proces anotácie zahŕňal kroky, ktoré mali zabezpečiť validácie kvality. Prvým krokom bola kontrola kompletnosti anotácií, kde sa overovalo, že všetky relevantné oblasti dokumentu sú označené a žiadna trieda nie je vynechaná.
+    \subsection{Rozdelenie dátovej sady}
+    Dátová sada bola rozdelená na trénovaciu a validačnú množinu v pomere 80:20. Trénovacia množina obsahuje 135 dokumentov a slúži na optimalizáciu parametrov neurónových sietí. Validačná množina s 34 dokumentmi je používaná na ladenie hyperparametrov a monitorovanie procesu trénovania s cieľom predchádzať pretrénovaniu. Testovacia množina s 37 dokumentmi zostáva počas celého procesu vývoja nedotknutá a slúži na finálne vyhodnotenie výkonnosti modelov.
+    
+    Rozdelenie bolo realizované skriptom poskytnutym samotným YOLO, aby sa zabezpečilo kompatibilné a rovnomerné zastúpenie dokumentov.
+    Dodatočne bola vytvorená malá podmnožina 12 dokumentov s obzvlášť výraznou degradáciou, ktorá slúži na špecializované testovanie robustnosti algoritmov voči extrémnym podmienkam.
+    \subsection{Predspracovanie a augmentácia dát}
+        \subsubsection{Pôvodná podoba datasetu}
+        Pôvodné digitalizované dokumenty sa nachádzali v rôznych formátoch a kvalitách, čo vyžadovalo štandardizáciu pre potreby trénovania neurónových sietí. Dokumenty boli pôvodne naskenované v rozlíšení od 1800 x 2700 pixelov, s farebnými profilmi RGB a občasne aj v odtieňoch sivej. Súborové formáty zahŕňali JPEG a PNG so zväčša rovnakým rozlíšením.
+    
+        Prvým krokom predspracovania bola konverzia všetkých obrazov do jednotného formátu PNG bez kompresie, aby sa predišlo stratám kvality. Farebné obrazy boli v tejto fáze zachované pre možnú analýzu farebných charakteristík atramentov a papiera.
+        \subsubsection{Binarizácia dát}
+        Binarizácia predstavuje spôsob spracovania, ktorý transformuje farebné alebo sivé obrazy na čiernobiele reprezentácie, kde text a grafické elementy sú oddelené od pozadia. Pre historické dokumenty s degradáciou a nerovnomerným osvetlením preukázala výnimočnú účinnosť pri spracovaní degradovaných rukopisov. Tento prístup zabezpečil optimálnu kvalitu binarizácie pre špecifické charakteristiky týchto dokumentov. 
+        \subsubsection{Augmentácia dát}
+        Augmentácia dát predstavuje techniku na zvýšenie rozmanitosti trénovacej množiny a zlepšenie generalizačnej schopnosti modelov, čo je obzvlášť dôležité pri relatívne malých datasetoch historických dokumentov. Implementovaná bola komplexná sada augmentačných techník špeciálne navrhnutých pre charakteristiky rukou písaných historických dokumentov.
+        
+        Geometrické augmentácie zahŕňali rotácie v rozsahu ±35 stupňov na simuláciu variácií v orientácii dokumentov počas skenovania. Tieto transformácie boli aplikované pre každý trénovací obrázok, čím sa zabezpečila vyvážená augmentácia bez nadmernej distorzie pôvodných charakteristík.
+        Fotometrická augmentácia bola navrhnutá na simuláciu rôznych podmienok osvetlenia a starnutia dokumentov.
+        Celkovo augmentácia mala za účel zvýšiť efektivitu voči nepozorovaným dokumentom.
+
+\section{Implementácia a experimenty}
+V tejto kapitole je popísaný proces implementácie a experimentálneho overenia detekčných modelov na úlohe detekcie komponentov historických rukou písaných nomenklátorových šifrovacích kľúčov. Cieľom experimentov bolo porovnať výkonnosť rôznych variantov modelu YOLO na viacerých verziách datasetu (pôvodný, binarizovaný, augmentovaný) a vyhodnotiť vplyv jednotlivých spracovaní na presnosť detekcie. Kapitola sa venuje výberu nástrojov,  konfigurácii modelov, nastaveniu tréningových parametrov, priebehu tréningu a použitiu hodnotiacich metrík.
+    \subsection{Použité nástroje a prostredie}
+    Na implementáciu a experimentovanie boli využité open-source nástroje a knižnice pre spracovanie obrazu a trénovanie hlbokých neurónových sietí. Hlavným frameworkom bol PyTorch 2.3 v kombinácii s knižnicou Ultralytics\cite{ultralytics2023yolo} YOLO11, ktorá poskytuje optimalizované implementácie najnovších architektúr YOLO. Pre anotáciu a vizualizáciu výsledkov boli použité vlastné skripty v Python 3.11.
+    
+    Výpočtové experimenty prebiehali na google colab vybavenom grafickou kartou NVIDIA TESLA T4 (16GB VRAM). Tento hardvér umožnil efektívny tréning aj najväčších variantov modelu YOLOv11 v krátkom čase.
+    
+    Pre spracovanie a predspracovanie datasetu boli využité knižnice OpenCV, Albumentations (pre augmentácie) a NumPy. Binarizácia bola realizovaná pomocou vlastnej implementácie, pričom výsledné binarizované obrázky boli uložené v PNG formáte pre ďalšie použitie v trénovaní.
+    
+    V rámci experimentov boli testované všetky hlavné varianty
+    YOLOv11:
+    \begin{itemize}
+        \item YOLOv11n (nano)
+        \item  YOLOv11s (small)
+        \item YOLOv11m (medium)
+        \item YOLOv11l (large)
+        \item YOLOv11x (extra large)
+    \end{itemize}
+    Každý model bol testovaný na identických dátových sadách, aby bolo možné objektívne porovnať ich výkonnosť.
+    \subsection{Konfigurácia modelu YOLOv11}
+    Model YOLOv11 je v čase písania tejto práce najnovšou generáciou objektových detektorov, ktorá prináša výrazné zlepšenia v rýchlosti a presnosti oproti predchádzajúcim verziám. Pre potreby tejto práce bola použitá konfigurácia pre úlohu object detection s viactriedovou segmentáciou podľa definovaných tried. 
+
+    Každý variant modelu bol inicializovaný s predtrénovanými váhami na COCO datasete, pričom následne prebiehal fine-tuning na vlastnej dátovej sade historických dokumentov. V rámci konfigurácie boli upravené nasledovné parametre: 
+    
+    \begin{itemize}
+        \item Počet tried: 10 (písmená, n-gramy, klamáče, kódy, nadpisy, dekorácie, pozadie)
+        \item Vstupná veľkosť obrázkov: 640 px (downsamplované z pôvodných skenov)
+        \item Batch size: 8 (obmedzený kapacitou GPU pri väčších modeloch)
+    \end{itemize}
+    
+    Konfiguračné súbory boli spravované pomocou labelme2yolo do YAML formátu. Labelme2yolo tiež štandardne prerozdelilo dataset pre tréning a valuáciu dát.
+    \subsection{Tréningové parametre}
+    Tréning modelov prebiehal v niekoľkých fázach. Hlavnou premennou bol počet epoch a samotný výber modelu. Pre každý variant modelu a každú verziu datasetu (pôvodný, binarizovaný, augmentovaný) bolo experimentálne nastavené rozmedzie epoch od 50 do 200. Počiatočné tréningy boli realizované na 50 epoch, pričom na základe priebehu validačnej straty bol počet epoch postupne zvyšovaný až do dosiahnutia saturácie výkonu. Nižší počet epoch slúžil na vybratie správneho medelu.
+    Ďalšie kľúčové tréningové parametre:
+    \begin{itemize}
+        \item Workers: 2
+        \item Patience: 10
+    \end{itemize}
+    Patience je argument pri spustení trénovania, ktorý pri stagnácií zastaví trénovanie. To eliminuje problém pretrénovania. Argument workers bol relevantný na začiatku trénovania, ktoré bolo vykonávané na domácom počítači.
+    \subsection{Priebeh tréningu}
+        \subsubsection{Tréning na pôvodnom datasete}
+            Prvý experimentálny scenár zahŕňal tréning modelov na pôvodných, farebných digitalizovaných dokumentoch bez ďalšieho predspracovania. Cieľom bolo zistiť, do akej miery si model dokáže poradiť s variabilitou šumu a degradácie papiera.
+    
+            Výsledky ukázali, že menšie modely (yolo11n.pt, yolo11s.pt) boli schopné sa naučiť základné vzory, avšak často dochádzalo k zámene tried pri horšie čitateľných častiach dokumentov.
+            
+            Stredné a veľké modely (yolo11m.pt, yolo11l.pt, yolo11x.pt) dosiahli vyššiu presnosť, ale ich tréning bol náchylnejší na pretrénovanie.
+            
+            Po zvýšení počtu epoch a aktivácií early stoppingu sa však podarilo dosiahnuť stabilnejšie výsledky.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.95\textwidth]{img/normal_results}
+                \caption{Normalizovvaná confusion matrix k pôvodnemu datasetu}
+                \label{fig:normal_results}
+            \end{figure}
+        \subsubsection{Tréning na binarizovanom datasete}
+        Druhá séria experimentov bola realizovaná na binarizovaných verziách datasetu. Binarizácia odstránila farebné a štrukturálneodlišnosti, čím by sa mali zvýrazniť hranice medzi jednotlivými komponentmi. Výsledky ukázali zlepšenie v niektorých prípadoch mimo skúmanej problematiky.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.7\textwidth]{img/better_binary.jpg}
+                \caption{Ukážka natrénovaného modelu na iných obrázkoch\cite{antal2022wrong}, model učený na binarizovanom datasete  preukázal lepšie predikcie v tomto prípade i keď výsledky z validácie boli horšie}
+                \label{fig:better_binary}
+            \end{figure}
+        Presnosť detekcie sa znížila voči pôvodnému datasetu. V confusion matrix je zaznamenaný veľký pokles hlavne v oblasti identifikácie key-nomen-nulls. Zlepšenie zaznamenala skupina označená page-numbers, ktorá ako jediná obsahovala obsah so strojovo tlačeným písmom.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.95\textwidth]{img/binary_results.png}
+                \caption{Normalizovvaná confusion matrix k binarizovanému datasetu}
+                \label{fig:normal_results}
+            \end{figure}
+        \subsubsection{Tréning na augmentovanom datasete}
+        Tretí experimentálny scenár využíval augmentovaný dataset, kde boli aplikované  augmentačné techniky ako rotácie, šum, rozmazanie, simulácia starnutia. Cieľom bolo zvýšiť robustnosť modelov voči variabilite historických dokumentov.
+        Neprítomnosť early stoppingu ukázala, že augmentácia výrazne znižuje riziko pretrénovania, aj pri väčších modeloch. Augmentácia žiaľ zaznamenala najhoršie výsledky. Rotácia mala za výsledok neschopnosť výsledných váh zachytiť štruktúry, niektoré obrázky zostali úplne bez detekcie. Ako naznačuje aj confusion matrix, štandardná augmentácia našej problematike nepomohla. Za zmienku stojí že identifikácia key-nomen a key-nomen-letters zhoršenie nezaznamenali
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.95\textwidth]{img/augmented_results.png}
+                \caption{Normalizovvaná confusion matrix k augmentovanému datasetu}
+                \label{fig:augmented_results}
+            \end{figure}
+    \subsection{Metriky hodnotenia}
+    Výkon jednotlivých modelov bol hodnotený pomocou štandardných metrík YOLO pre úlohy detekcie objektov:
+
+    \begin{itemize}
+            \item Confusion matrix: tabuľka, ktorá vizualizuje výkonnosť klasifikačného modelu a jasne zachytáva správne určené hodnoty a nesprávne určené hodnoty
+            \begin{itemize}
+                \item Os X: inštancie predikovaných ako daná trieda
+                \item Os Y: inštancie skutočnej triedy
+            \end{itemize}
+            \item F1 Curve: graf ktorý ukazuje, ako sa mení F1 skóre (harmonický priemer presnosti a úplnosti) v závislosti od rôznych hodnôt prahu spoľahlivosti (confidence threshold)
+            \begin{itemize}
+                \item Os X: Prah spoľahlivosti (Confidence Threshold), zvyčajne od 0 do 1.
+                \item Os Y: F1 skóre, od 0 do 1
+            \end{itemize}
+            \item P Curve: graf precíznosti v závislosti od rôznych hodnôt prahu spoľahlivosti
+            \begin{itemize}
+                \item Os X: Prah spoľahlivosti 
+                \item Os Y: Presnosť (Precision)
+             \end{itemize}
+            \item PR Curve: vzťah medzi presnosťou (Precision) a úplnosťou (Recall)
+            \begin{itemize}
+                \item Os X: Úplnosť (Recall), od 0 do 1
+                \item Os Y: Presnosť (Precision), od 0 do 1
+            \end{itemize}
+    Ideálny model by mal krivku čo najbližšie k pravému hornému rohu (Presnosť=1, Úplnosť=1)
+            \item R Curve: Graf ukazuje, ako sa mení úplnosť (Recall) v závislosti od rôznych hodnôt prahu spoľahlivosti
+            \begin{itemize}
+                \item Os X: Prah spoľahlivosti
+                \item Os Y: Úplnosť (Recall)
+            \end{itemize}
+    Pre kompletné vyhodnotenie boli tieto výsledky vygenerované samostatne pre každú triedu.
+    \end{itemize}
+
+\section{Výsledky a diskusia}
+Táto kapitola prezentuje experimentálne výsledky trénovania modelov YOLO11 na rôznych verziách datasetu historických rukou písaných šifrovacích kľúčov. Cieľom je ukázať vplyv predspracovania na presnosť detekcie a porovnať výkonnosť jednotlivých modelov v týchto podmienkach. Výsledky sú prezentované pomocou metrík ako mAP, Precision, Recall, F1-score aj kvalitatívne, s dôrazom na praktickú použiteľnosť detekčných výstupov. 
+    \subsection{Prezentácia výsledkov tréningu}
+    V tejto časti sú výsledky tréningu modelov na troch variantoch datasetu: pôvodny, binarizový a augmentovaný. Pre každý z nich sú uvedené spomínané metriky pre všetky porovnávané modely (yolo11s, yolo11m, yolo11l, yolo11x) a rozdiely medzi nimi.
+        \subsubsection{Výsledky modelu trénovaného na pôvodnom datasete}
+        \begin{table}[h!]
+        \centering
+        \begin{tabularx}{0.8\textwidth} { 
+          | >{\raggedright\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X
+          | >{\centering\arraybackslash}X
+          | >{\centering\arraybackslash}X
+          | >{\centering\arraybackslash}X | }
+         \hline
+         \textbf{Model} & \textbf{mAP} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+         \hline
+         YOLO11n & 0.493 & 0.820 & 0.651 & 0.726 \\
+         \hline
+         YOLO11s & 0.524 & 0.677 & 0.791 & 0.730 \\
+         \hline
+         YOLO11m & 0.523 & 0.679 & 0.754 & 0.714 \\
+         \hline
+         YOLO11l & 0.495 & 0.604 & 0.802 & 0.689 \\
+         \hline
+         YOLO11x & 0.515 & 0.626 & 0.759 & 0.6865 \\
+        \hline
+        \end{tabularx}
+        \caption{Trénovacie výsledky YOLO11}
+        \label{tab:yolo11_results}
+    \end{table}
+    
+    Výsledky ukazujú, že modely nedosahujú vyššie hodnoty pri väčších modeloch. Pri väčších modeloch (YOLO11l, YOLO11x) sa výsledky nezhoršili o moc ale ani sa nezlepšili. Uskutočnilo sa niečo čo sa nazýva overfitting. Tieto výsledky potvrdili že lepšie bude pokračovať s modelom yolo11s.
+           \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\textwidth]{img/normal_results}
+                \caption{Normalizovvaná confusion matrix k pôvodnemu datasetu (YOLO11x)}
+                \label{fig:normal_results}
+            \end{figure}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\textwidth]{img/normal_resultsS}
+                \caption{Normalizovvaná confusion matrix k pôvodnemu datasetu (YOLO11s)}
+                \label{fig:normal_resultsS}
+            \end{figure}
+        \subsubsection{Výsledky modelu trénovaného na binarizovanom datasete}
+        Tato časť je zameraná na vplyv binarizácie dát na výsledky. Binarizácia spočíva v transformácií pôvodných farebných alebo sivých obrázkov do čiernobielej formy. Tento krok bol realizovaný s cieľom odstrániť farebné artefakty, šum a nerovnomerné osvetlenie, ktoré sú bežné pri historických rukopisných dokumentoch. 
+
+        Použitím binarizovaného datasetu sa modelu má výrazne zjednodušiť vizuálna úloha, pretože hranice medzi jednotlivými komponentmi by mali byť ostrejšie a kontrastnejšie. To umožňuje lepšie učenie sa štruktúr a zníženie chýb spôsobených rušivými prvkami na pozadí. Výsledky tréningu ukázali mierne zlepšenie v presnosti detekcie strán, ktoré sú ako jediné zaznamenané tlačeným písmom. 
+        
+        Napriek tomu, že binarizácia odstránila niektoré vizuálne informácie, ktoré by mohli byť pre model užitočné, celkový efekt nebol revolučný. Model sa stal robustnejším voči degradácii tlačeného písma ale nedokázal lepšie generalizovať na rôzne typy rukopisov a štruktúr. 
+        
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.75\textwidth]{img/binary_results.png}
+                \caption{Normalizovvaná confusion matrix k binarizovanému datasetu}
+                \label{fig:normal_results}
+            \end{figure}
+        \begin{table}[h!]
+        \centering
+             \begin{tabularx}{0.6\textwidth} { 
+              | >{\raggedright\arraybackslash}X
+              | >{\centering\arraybackslash}X
+              | >{\centering\arraybackslash}X
+              | >{\centering\arraybackslash}X 
+              | >{\centering\arraybackslash}X | }
+             \hline
+             \textbf{mAP} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+             \hline
+             0.465 & 0.742 & 0.645 & 0.690 \\
+             \hline
+            \end{tabularx}
+            \caption{Trénovacie výsledky YOLO11 (binarizovaný dataset)}
+            \label{tab:yolo11_results}
+        \end{table}
+        \subsubsection{Výsledky modelu trénovaného na augmentovanom datasete}
+        Augmentácia dát predstavuje súbor techník, ktorými sa umelo rozširuje trénovacia množina pomocou transformácií. Cieľom je zvýšiť variabilitu dát a tým zlepšiť schopnosť modelu detekovať pri na nových a neznámych dokumentoch. 
+        
+        Tréning modelu na augmentovanom datasete priniesol výrazné odlišné výsledky v schopnosti zvládať vizuálne deformácie a poškodenia, ktoré sa v historických rukopisoch bežne vyskytujú. Model sa nenaučil korektne rozpoznávať komponenty nomenklátora. Problém spočíval v tom, že augmentovaný dataset sa snažil model natrénovať na veľké množstvo prekážok na celkom malom datasete. 
+        
+        Augmentácia nezmenila základnú štruktúru dát, mala umožniť modelu lepšie sa adaptovať na reálne podmienky a znížiť riziko pretrénovania na špecifických vzoroch pôvodného datasetu. Tým pádom sa veľa transformácií udialo na malom počte dát. Ako napríklad otočenie ku ktorému zväčša ani nedojde. 
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.75\textwidth]{img/augmented_results.png}
+                \caption{Normalizovvaná confusion matrix k augmentovanému datasetu}
+                \label{fig:augmented_results}
+            \end{figure}
+            \begin{table}[h!]
+            \centering
+                 \begin{tabularx}{0.6\textwidth} { 
+                  | >{\raggedright\arraybackslash}X
+                  | >{\centering\arraybackslash}X
+                  | >{\centering\arraybackslash}X
+                  | >{\centering\arraybackslash}X 
+                  | >{\centering\arraybackslash}X | }
+                 \hline
+                 \textbf{mAP} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+                 \hline
+                 0.108 & 0.255 & 0.273 & 0.264 \\
+                 \hline
+                \end{tabularx}
+                \caption{Trénovacie výsledky YOLO11 (augmentovaný dataset)}
+                \label{tab:yolo11_results}
+            \end{table}
+    \subsection{Porovnanie výkonnosti modelov}
+    Každý model YOLO11 (n, s, m, l, x) bol trénovaný a testovaný na identických dátových sadách a hodnotený pomocou metrík popísaných v kapitole 4.5. Výsledky ukazujú, že s rastúcou komplexitou modelu sa nie vždy zvyšuje aj jeho schopnosť presne detekovať jednotlivé časti šifrovacích kľúčov. Za cenu vyšších výpočtových nárokov a dlhšieho času trénovania môže dosjť aj k pretrénovaniu.
+    \begin{table}[h!]
+        \centering
+        \begin{tabularx}{0.95\textwidth} { 
+          | >{\raggedright\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X | }
+         \hline
+         \textbf{Model} & \textbf{mAP} & \textbf{čas(min)} \\
+         \hline
+         YOLO11n & 0.493 & 54\\
+         \hline
+         YOLO11s & 0.524 & 55\\
+         \hline
+         YOLO11m & 0.523 & 60\\
+         \hline
+         YOLO11l & 0.495 & 67\\
+         \hline
+         YOLO11x & 0.515 & 74\\
+        \hline
+        \end{tabularx}
+        \caption{Trénovacie výsledky YOLO11 a ich trvanie}
+        \label{tab:yolo11_results}
+    \end{table}
+    Z výsledkov vyplýva, že najvyššiu presnosť dosiahol model YOLO11s, ktorý prekonal ostatné modely vo všetkých hodnotených metrikách ako bolo vidieť aj v 5.1.1. Model YOLO11m dosiahol veľmi podobné výsledky ale s mierne nižšou výpočtovou náročnosťou. YOLO11l a YOLO11n dopadli pomerne rovnako pri čom YOLO11l zahŕňalo oveľa viac výpočtov. 
+    \subsection{Analýza vplyvu predspracovania a augmentácie}
+        \subsubsection{Vplyv binarizácie na presnosť detekcie}
+        Binarizácia dát je krok v predspracovaní historických dokumentov, ktorý by mal významne ovplyvniť výsledky. Jej cieľom je odstrániť šum. Výsledky experimentov ukazujú, že binarizácia má pozitívny vplyv na presnosť detekcie tlačených prvkov.
+    \begin{table}[h!]
+        \centering
+        \begin{tabularx}{0.95\textwidth} { 
+          | >{\raggedright\arraybackslash}X 
+          | >{\centering\arraybackslash}X | }
+         \hline
+         \textbf{Dataset} & \textbf{mAP} \\
+         \hline
+         Binarizovaný & 0.465\\
+         \hline
+         Pôvodný & 0.524\\
+         \hline
+        \end{tabularx}
+        \caption{Porovnanie mAP YOLO11 (binarizácia)}
+        \label{tab:yolo11_results}
+    \end{table}
+    
+    Modely by mali byť schopné lepšie rozlišovať hranice medzi jednotlivými komponentmi, čo vedie k vyšším hodnotám IoU a celkovému zlepšeniu detekcie. Avšak náš dataset nemá  viditeľné hranice, ktoré by binarizácia zvíraznila. 
+        \subsubsection{Vplyv augmentácie na robustnosť a generalizáciu modelu}
+        Augmentácia dát slúži na zvýšenie robustnosti modelov voči variabilite historických dokumentov. V experimentoch boli aplikované typy augmentácií ako rotácie, posuny, šum, ktoré výrazne rozšírili variabilitu trénovacích príkladov.
+        \begin{table}[h!]
+            \centering
+            \begin{tabularx}{0.95\textwidth} { 
+              | >{\raggedright\arraybackslash}X 
+              | >{\centering\arraybackslash}X | }
+             \hline
+             \textbf{Dataset} & \textbf{mAP} \\
+             \hline
+             Augmentovaný & 0.108\\
+             \hline
+             Pôvodný & 0.524\\
+             \hline
+            \end{tabularx}
+            \caption{Porovnanie mAP YOLO11 (augmentácia)}
+            \label{tab:yolo11_results}
+        \end{table}
+        
+        Porovnanie výsledkov ukazuje, že modely trénované na augmentovaných dátach nedosiahli požadovanú schopnosť. Rozdiel v mAP medzi modelmi trénovanými s a bez augmentácie je najvýraznejší spomedzi všetkých porovnávanych výsledkov.
+    \subsection{Kvalitatívna analýza výsledkov}
+    Výsledky ukazujú, že väčšie modely (YOLO11l, YOLO11x) nedokážu presnejšie identifikovať zložité štruktúry ako bolo predpokladané. Pri vizuálnej kontrole detekcie je možné pozorovať, že zložitosť modelu nepomohla zlepšiť schopnosť detekcie. 
+
+    Menšie modely (špecificky YOLO11s) boli odolné voči overfittingu. Schopnosť správne označovať oblasti s nižším kontrastom nebola negatívne ovplyvnená. 
+    
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\textwidth]{img/img45s.png}
+                \caption{Ukážka detekcie modelu yolo11s}
+                \label{fig:resultS}
+            \end{figure}           
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\textwidth]{img/img45x.png}
+                \caption{Ukážka detekcie modelu yolo11x}
+                \label{fig:resultX}
+            \end{figure}
+    
+    V niektorých vyskytli aj zaujímavé chyby, napríklad model si nebol tak istý niektorými štruktúrami a iné boli zas rozpoznané s väčšou pravdepodobnosťou. Tieto prípady poukazujú na limity aktuálnych modelov, limity aktuálneho prístupu riešenia problému a potrebu ďalšieho vylepšovania. 
+    \subsection{Diskusia}
+    Výsledky potvrdzujú, že výber modelu a spôsob predspracovania dát majú vplyv na úspešnosť detekcie historických rukou písaných šifrovacích kľúčov. Model YOLO11s predstavuje najlepší kompromis medzi presnosťou a efektivitou. Väčšie modely nedosahujú lepšie výsledky a ich zložitosť z nich robí banalitu v riešení úloh experimentu.
+    
+    Binarizácia dát zlepšuje presnosť detekcie, keď ide o strojovo tlačené písmo. To síce nebolo zameraním práce ale výsledok vyzdvihuje, že binarizácia nie je úplne zbytočná. Pri práci s dokumentmi je preto vhodné kombinovať oba prístupy.
+    
+    Za limity aktuálneho riešenia môžeme považovať:
+    \begin{itemize}
+        \item obmedzenú veľkosť datasetu, ktorá znižuje možnosti modelu naučiť sa štruktúry, ktoré sa v ňom nevyskytujú        
+        \item jednotvárnosť datasetu, ktorá znižuje presnosť modelu naučiť sa na iné špecifické štruktúry
+        \item variabilitu rukopisov a spracovania dokumentov, ktoré môžu viesť k chybám detekcie
+        \item obmedzenia architektúry YOLO pri rukou písaných dokumentoch
+    \end{itemize}
+    \subsection{Návrhy na možné vylepšenia}
+    Na základe získaných výsledkov a identifikovaných limitov možno navrhnúť niekoľko možných vylepšení: 
+    \begin{itemize}
+        \item Rozšírenie datasetu: Získanie a anotácia ďalších historických dokumentov z rôznych zdrojov by umožnila modelom naučiť sa širšiu škálu vzorov a zvýšila by ich robustnosť. 
+        
+        \item Vylepšenie predspracovania: Experimentovanie s pokročilými metódami binarizácie, napríklad využitie generatívnych modelov alebo adaptívneho učenia na konkrétne typy problémov. 
+        
+        \item Semi-supervised learning: Vzhľadom na náročnosť anotácie historických dokumentov by mohli byť prínosné lebo využívajú aj neoznačené dáta na zlepšenie výkonnosti modelu. 
+        
+        \item Výkonnejšia GPU: trénovanie na grafickej karte výrazne zvyšuje výkon a rýchlosť trénovania. Výkonnejšia GPU predstavuje možnosť experimentovať vo vyžšom množstve 
+        
+        \item Post-processing výsledkov: Zavedenie pravidiel alebo heuristík na úrovni výstupov modelu (napr. odstránenie zjavne nesprávnych segmentov podľa štruktúry nomenklátora) by mohlo znížiť počet chýb v praktickom nasadení. 
+    \end{itemize}
+    Tieto návrhy by mohli potenciálne zlepšiť výskum, ktorý by mohol významne prispieť k automatizácii a efektivitemu spracovaniu historických šifrovacích dokumentov. 
+
+
+% Zoznam použitej literatúry
+%\bibliographystyle{plain}
+%\bibliography{literatura}
+
+% Prílohy (voliteľné)

@@ -1,0 +1,71 @@
+\paragraph{Požiadavky na prostredie}:
+
+Pre správne spustenie skriptov a použitie natrénovaných váh je potrebné mať nainštalované:
+
+\begin{itemize}
+    \item Python (odporúčaná verzia: 3.8 alebo novšia)
+    \item Ultralytics (knižnica pre YOLO modely)
+    \item OpenCV (na spracovanie obrázkov)
+    \item NumPy (na prácu s poľami a obrazovými dátami)
+(voliteľne) albumentations (ak chceš použiť augmentačné skripty)
+    \item albumentations (ak chceš použiť augmentačné skripty)
+\end{itemize}
+Inštalácia potrebných balíkov (v termináli):
+\begin{lstlisting}[
+  caption={},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+pip install ultralytics opencv-python numpy albumentations
+
+\end{lstlisting}
+
+\paragraph{Použitie natrénovaných váh YOLO}:
+
+Príprava súborov
+\begin{itemize}
+    \item Umiestnite natrénované váhy (napr. best.pt) do zvoleného adresára.
+    \item Pripravte si adresár s obrázkami, ktoré chceš analyzovať.
+\end{itemize}
+Spustenie detekčného skriptu:
+\begin{lstlisting}[
+  caption={script.py},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+import os
+import cv2
+import numpy as np
+from ultralytics import YOLO
+
+MODEL_PATH = "cesta/k/best.pt"
+INPUT_FOLDER = "cesta/k/obrazkom"
+OUTPUT_FOLDER = "cesta/pre/vystup"
+
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+model = YOLO(MODEL_PATH)
+
+for filename in os.listdir(INPUT_FOLDER):
+    if filename.lower().endswith((".jpg", ".jpeg", ".png")):
+        input_path = os.path.join(INPUT_FOLDER, filename)
+        output_path = os.path.join(OUTPUT_FOLDER, filename)
+        frame = cv2.imread(input_path)
+        results = model.predict(frame, save=False)
+        img = results[0].plot(font_size=60, pil=True)
+        img_np = np.array(img)
+        img_bgr = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
+        cv2.imwrite(output_path, img_bgr)
+        print(f"Processed: {filename}")
+        
+\end{lstlisting}
+
+\begin{lstlisting}[
+  caption={zadajte do terminálu (treba sa nachádzať v adresári)},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+    python3 script.py
+\end{lstlisting}
