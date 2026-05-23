@@ -1,21 +1,32 @@
 \babel@toc {slovak}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Typy substitúcií v nomenklátoroch\relax }}{5}{table.caption.10}%
-\contentsline {table}{\numberline {2}{\ignorespaces Trénovacie výsledky YOLO11\relax }}{23}{table.caption.55}%
-\contentsline {table}{\numberline {3}{\ignorespaces Trénovacie výsledky YOLO11 (binarizovaný dataset)\relax }}{25}{table.caption.60}%
-\contentsline {table}{\numberline {4}{\ignorespaces Trénovacie výsledky YOLO11 (augmentovaný dataset)\relax }}{26}{table.caption.63}%
-\contentsline {table}{\numberline {5}{\ignorespaces Trénovacie výsledky YOLO11 a ich trvanie\relax }}{27}{table.caption.65}%
-\contentsline {table}{\numberline {6}{\ignorespaces Porovnanie mAP YOLO11 (binarizácia)\relax }}{27}{table.caption.68}%
-\contentsline {table}{\numberline {7}{\ignorespaces Porovnanie mAP YOLO11 (augmentácia)\relax }}{28}{table.caption.70}%
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
+\contentsline {table}{\numberline {1}{\ignorespaces Typy substitúcií v nomenklátoroch\relax }}{5}{table.caption.6}%
+\contentsline {table}{\numberline {2}{\ignorespaces Výsledky modelu YOLO11n\relax }}{21}{table.caption.48}%
+\contentsline {table}{\numberline {3}{\ignorespaces Výsledky modelu YOLO11s\relax }}{22}{table.caption.50}%
+\contentsline {table}{\numberline {4}{\ignorespaces Výsledky modelu YOLO11m\relax }}{23}{table.caption.52}%
+\contentsline {table}{\numberline {5}{\ignorespaces Výsledky modelu YOLO11l\relax }}{24}{table.caption.54}%
+\contentsline {table}{\numberline {6}{\ignorespaces Výsledky modelu YOLO11x\relax }}{25}{table.caption.56}%
+\contentsline {table}{\numberline {7}{\ignorespaces Porovnanie modelov YOLO11\relax }}{26}{table.caption.58}%
+\contentsline {table}{\numberline {8}{\ignorespaces Výsledky tréningu pôvodného datasetu pri 30 epochách\relax }}{26}{table.caption.61}%
+\contentsline {table}{\numberline {9}{\ignorespaces Výsledky tréningu pôvodného datasetu pri 50 epochách\relax }}{27}{table.caption.63}%
+\contentsline {table}{\numberline {10}{\ignorespaces Výsledky tréningu v datasetu pri 70 epochách\relax }}{27}{table.caption.65}%
+\contentsline {table}{\numberline {11}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete pri 30 epochách\relax }}{28}{table.caption.68}%
+\contentsline {table}{\numberline {12}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete pri 50 epochách\relax }}{29}{table.caption.70}%
+\contentsline {table}{\numberline {13}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete pri 70 epochách\relax }}{29}{table.caption.72}%
+\contentsline {table}{\numberline {14}{\ignorespaces Výsledky tréningu s augmentáciou pri 30 epochách\relax }}{30}{table.caption.75}%
+\contentsline {table}{\numberline {15}{\ignorespaces Výsledky tréningu s augmentáciou pri 50 epochách\relax }}{31}{table.caption.77}%
+\contentsline {table}{\numberline {16}{\ignorespaces Výsledky tréningu s augmentáciou pri 70 epochách\relax }}{31}{table.caption.79}%
+\contentsline {table}{\numberline {17}{\ignorespaces Výsledky tréningu YOLO11s na pôvodnom datasete s early stopping\relax }}{32}{table.caption.82}%
+\contentsline {table}{\numberline {18}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete s early stopping\relax }}{33}{table.caption.84}%
+\contentsline {table}{\numberline {19}{\ignorespaces Výsledky tréningu YOLO11s s augmentáciou datasetu a early stopping\relax }}{34}{table.caption.86}%
+\contentsline {table}{\numberline {20}{\ignorespaces Výsledky tréningu YOLO11s na pôvodnom datasete s early stopping patience 40\relax }}{35}{table.caption.90}%
+\contentsline {table}{\numberline {21}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete s early stopping patience 40\relax }}{36}{table.caption.92}%
+\contentsline {table}{\numberline {22}{\ignorespaces Výsledky tréningu YOLO11s s augmentáciou datasetu a early stopping patience 40\relax }}{37}{table.caption.94}%
+\contentsline {table}{\numberline {23}{\ignorespaces Výsledky tréningu YOLO11s na pôvodnom datasete s early stopping patience 50\relax }}{38}{table.caption.98}%
+\contentsline {table}{\numberline {24}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete s early stopping patience 50\relax }}{39}{table.caption.100}%
+\contentsline {table}{\numberline {25}{\ignorespaces Výsledky tréningu YOLO11s s augmentáciou datasetu a early stopping patience 50\relax }}{40}{table.caption.102}%
+\contentsline {table}{\numberline {26}{\ignorespaces Výsledky tréningu YOLO11s na pôvodnom datasete bez agresívneho early stopping\relax }}{42}{table.caption.106}%
+\contentsline {table}{\numberline {27}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom datasete bez agresívneho early stopping\relax }}{43}{table.caption.108}%
+\contentsline {table}{\numberline {28}{\ignorespaces Výsledky tréningu YOLO11s na binarizovanom augmentovanom datasete\relax }}{44}{table.caption.110}%
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 

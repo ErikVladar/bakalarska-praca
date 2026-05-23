@@ -1,16 +1,16 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'main.blg'
-[135] biber-darwin:340> INFO - === Mon Jan 26, 2026, 19:51:36
-[165] Biber.pm:419> INFO - Reading 'main.bcf'
-[291] Biber.pm:979> INFO - Found 25 citekeys in bib section 0
-[322] Biber.pm:4419> INFO - Processing section 0
-[349] Biber.pm:4610> INFO - Looking for bibtex file 'includes/bibliography.bib' for section 0
-[355] bibtex.pm:1713> INFO - LaTeX decoding ...
-[408] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/bibliography.bib'
-[729] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
-[729] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[729] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'sk-SK'
-[759] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[784] bbl.pm:763> INFO - Output to main.bbl
-[784] Biber.pm:131> WARN - ISBN '978-88-87612-44-2' in entry 'tranchedino2011secret' is invalid - run biber with '--validate_datamodel' for details.
-[784] Biber.pm:133> INFO - WARNINGS: 1
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[138] biber-darwin:340> INFO - === Sat May 23, 2026, 02:24:56
+[161] Biber.pm:419> INFO - Reading 'main.bcf'
+[305] Biber.pm:979> INFO - Found 22 citekeys in bib section 0
+[330] Biber.pm:4419> INFO - Processing section 0
+[347] Biber.pm:4610> INFO - Looking for bibtex file 'includes/bibliography.bib' for section 0
+[350] bibtex.pm:1713> INFO - LaTeX decoding ...
+[392] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/bibliography.bib'
+[770] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[771] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[771] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'sk-SK'
+[799] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[820] bbl.pm:763> INFO - Output to main.bbl
+[820] Biber.pm:131> WARN - ISBN '978-88-87612-44-2' in entry 'tranchedino2011secret' is invalid - run biber with '--validate_datamodel' for details.
+[821] Biber.pm:133> INFO - WARNINGS: 1

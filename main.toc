@@ -5,66 +5,98 @@
 \contentsline {paragraph}{Ciele práce}{1}{section*.2}%
 \contentsline {paragraph}{Štruktúra práce}{2}{section*.2}%
 \contentsline {section}{\numberline {1}Teoretické východiská}{4}{section.3}%
-\contentsline {subsection}{\numberline {1.1}Historické substitučné šifry}{4}{subsection.4}%
-\contentsline {subsubsection}{\numberline {1.1.1}Substitučná šifra}{4}{subsubsection.5}%
-\contentsline {subsubsection}{\numberline {1.1.2}Jednoduchá substitučná šifra}{4}{subsubsection.6}%
-\contentsline {subsubsection}{\numberline {1.1.3}Homofónna substitučná šifra}{4}{subsubsection.7}%
-\contentsline {subsubsection}{\numberline {1.1.4}Nomenklátory}{4}{subsubsection.8}%
-\contentsline {paragraph}{Typy substitučných podsystémov v nomenklátoroch (písmená, n-gramy, klamáče, kódy)}{5}{figure.caption.9}%
-\contentsline {paragraph}{Grafické usporiadanie a vizuálne štruktúry nomenklátorových kľúčov na papieri}{6}{table.caption.10}%
-\contentsline {subsection}{\numberline {1.2}Umelá inteligencia pre porozumenie rukou písaných dokumentov}{6}{subsection.11}%
-\contentsline {subsubsection}{\numberline {1.2.1}Spracovanie obrazu a predikcia v dokumentoch}{6}{subsubsection.12}%
-\contentsline {subsubsection}{\numberline {1.2.2}Strojové učenie a hlboké učenie v analýze dokumentov}{6}{subsubsection.13}%
-\contentsline {subsubsection}{\numberline {1.2.3}Detekcia objektov v obraze}{6}{subsubsection.14}%
-\contentsline {subsubsection}{\numberline {1.2.4}Princípy detekcie objektov}{7}{subsubsection.15}%
-\contentsline {paragraph}{Konvolučné neurónové siete (CNN) pre detekciu objektov}{7}{subsubsection.15}%
-\contentsline {subsubsection}{\numberline {1.2.5}Špecifiká spracovania rukou písaného textu}{7}{subsubsection.16}%
-\contentsline {section}{\numberline {2}Analýza súčasného stavu a návrh riešenia}{8}{section.17}%
-\contentsline {subsection}{\numberline {2.1}Prehľad existujúcich prístupov k segmentácii dokumentov}{8}{subsection.18}%
-\contentsline {subsubsection}{\numberline {2.1.1}Tradičné metódy (napr. založené na pravidlách, projekčných profiloch)}{8}{subsubsection.19}%
-\contentsline {subsubsection}{\numberline {2.1.2}Metódy založené na strojovom učení a hlbokom učení}{8}{subsubsection.20}%
-\contentsline {subsection}{\numberline {2.2}Prehľad využitia AI pri analýze historických dokumentov a šifier}{9}{subsection.21}%
-\contentsline {subsection}{\numberline {2.3}Voľba technológie pre detekciu}{9}{subsection.22}%
-\contentsline {subsubsection}{\numberline {2.3.1}Zdôvodnenie výberu YOLO (You Only Look Once)}{9}{subsubsection.23}%
-\contentsline {subsubsection}{\numberline {2.3.2}Predstavenie architektúry YOLO11}{10}{subsubsection.24}%
-\contentsline {subsection}{\numberline {2.4}Navrhovaný systém detekcie}{10}{subsection.25}%
-\contentsline {section}{\numberline {3}Príprava dátovej sady (Datasetu)}{11}{section.26}%
-\contentsline {subsection}{\numberline {3.1}Zdroj a charakteristika dát}{11}{subsection.27}%
-\contentsline {subsection}{\numberline {3.2}Popis dátovej sady}{11}{subsection.28}%
-\contentsline {subsection}{\numberline {3.3}Anotácia dát}{12}{subsection.29}%
-\contentsline {subsubsection}{\numberline {3.3.1}Definovanie tried pre segmentáciu}{12}{subsubsection.30}%
-\contentsline {subsubsection}{\numberline {3.3.2}Proces a nástroje anotácie}{14}{subsubsection.33}%
-\contentsline {subsection}{\numberline {3.4}Rozdelenie dátovej sady}{14}{subsection.34}%
-\contentsline {subsection}{\numberline {3.5}Predspracovanie a augmentácia dát}{14}{subsection.35}%
-\contentsline {subsubsection}{\numberline {3.5.1}Pôvodná podoba datasetu}{14}{subsubsection.36}%
-\contentsline {subsubsection}{\numberline {3.5.2}Binarizácia dát}{15}{subsubsection.37}%
-\contentsline {subsubsection}{\numberline {3.5.3}Augmentácia dát}{15}{subsubsection.38}%
-\contentsline {section}{\numberline {4}Implementácia a experimenty}{16}{section.39}%
-\contentsline {subsection}{\numberline {4.1}Použité nástroje a prostredie}{16}{subsection.40}%
-\contentsline {subsection}{\numberline {4.2}Konfigurácia modelu YOLOv11}{17}{subsection.41}%
-\contentsline {subsection}{\numberline {4.3}Tréningové parametre}{17}{subsection.42}%
-\contentsline {subsection}{\numberline {4.4}Priebeh tréningu}{17}{subsection.43}%
-\contentsline {subsubsection}{\numberline {4.4.1}Tréning na pôvodnom datasete}{17}{subsubsection.44}%
-\contentsline {subsubsection}{\numberline {4.4.2}Tréning na binarizovanom datasete}{18}{subsubsection.46}%
-\contentsline {subsubsection}{\numberline {4.4.3}Tréning na augmentovanom datasete}{20}{subsubsection.49}%
-\contentsline {subsection}{\numberline {4.5}Metriky hodnotenia}{21}{subsection.51}%
-\contentsline {section}{\numberline {5}Výsledky a diskusia}{23}{section.52}%
-\contentsline {subsection}{\numberline {5.1}Prezentácia výsledkov tréningu}{23}{subsection.53}%
-\contentsline {subsubsection}{\numberline {5.1.1}Výsledky modelu trénovaného na pôvodnom datasete}{23}{subsubsection.54}%
-\contentsline {subsubsection}{\numberline {5.1.2}Výsledky modelu trénovaného na binarizovanom datasete}{25}{subsubsection.58}%
-\contentsline {subsubsection}{\numberline {5.1.3}Výsledky modelu trénovaného na augmentovanom datasete}{26}{subsubsection.61}%
-\contentsline {subsection}{\numberline {5.2}Porovnanie výkonnosti modelov}{27}{subsection.64}%
-\contentsline {subsection}{\numberline {5.3}Analýza vplyvu predspracovania a augmentácie}{27}{subsection.66}%
-\contentsline {subsubsection}{\numberline {5.3.1}Vplyv binarizácie na presnosť detekcie}{27}{subsubsection.67}%
-\contentsline {subsubsection}{\numberline {5.3.2}Vplyv augmentácie na robustnosť a generalizáciu modelu}{28}{subsubsection.69}%
-\contentsline {subsection}{\numberline {5.4}Kvalitatívna analýza výsledkov}{28}{subsection.71}%
-\contentsline {subsection}{\numberline {5.5}Diskusia}{29}{subsection.74}%
-\contentsline {subsection}{\numberline {5.6}Návrhy na možné vylepšenia}{30}{subsection.75}%
-\contentsline {section}{Z\'{a}ver}{31}{section*.76}%
-\contentsline {paragraph}{Zhrnutie dosiahnutých výsledkov}{31}{section*.76}%
-\contentsline {paragraph}{Prínos práce}{31}{section*.76}%
-\contentsline {paragraph}{Možnosti ďalšieho výskumu}{31}{section*.76}%
-\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{32}{section*.77}%
+\contentsline {subsection}{\numberline {1.1}Nomenklátory}{4}{subsection.4}%
+\contentsline {paragraph}{Typy substitučných podsystémov v nomenklátoroch (písmená, n-gramy, klamáče, kódy)}{5}{figure.caption.5}%
+\contentsline {paragraph}{Grafické usporiadanie a vizuálne štruktúry nomenklátorových kľúčov na papieri}{5}{table.caption.6}%
+\contentsline {subsubsection}{\numberline {1.1.1}Substitučná šifra}{5}{subsubsection.7}%
+\contentsline {subsubsection}{\numberline {1.1.2}Jednoduchá substitučná šifra}{5}{subsubsection.8}%
+\contentsline {subsubsection}{\numberline {1.1.3}Homofónna substitučná šifra}{6}{subsubsection.9}%
+\contentsline {subsubsection}{\numberline {1.1.4}Monoalphabetická a homofónna substitúcia}{6}{subsubsection.10}%
+\contentsline {subsubsection}{\numberline {1.1.5}Bigramová a trigramová substitúcia}{6}{subsubsection.11}%
+\contentsline {subsubsection}{\numberline {1.1.6}Kódové slová}{6}{subsubsection.12}%
+\contentsline {subsubsection}{\numberline {1.1.7}Nully a doplnkové znaky}{7}{subsubsection.13}%
+\contentsline {subsection}{\numberline {1.2}Umelá inteligencia pre porozumenie rukou písaných dokumentov}{7}{subsection.14}%
+\contentsline {subsubsection}{\numberline {1.2.1}Detekcia objektov v obraze}{7}{subsubsection.15}%
+\contentsline {subsubsection}{\numberline {1.2.2}Princípy detekcie objektov}{8}{subsubsection.16}%
+\contentsline {paragraph}{Konvolučné neurónové siete (CNN) pre detekciu objektov}{8}{subsubsection.16}%
+\contentsline {subsubsection}{\numberline {1.2.3}Špecifiká spracovania rukou písaného textu}{8}{subsubsection.17}%
+\contentsline {section}{\numberline {2}Analýza súčasného stavu a návrh riešenia}{9}{section.18}%
+\contentsline {subsection}{\numberline {2.1}Prehľad existujúcich prístupov k segmentácii dokumentov}{9}{subsection.19}%
+\contentsline {subsubsection}{\numberline {2.1.1}Tradičné metódy (napr. založené na pravidlách, projekčných profiloch)}{9}{subsubsection.20}%
+\contentsline {subsubsection}{\numberline {2.1.2}Metódy založené na strojovom učení a hlbokom učení}{9}{subsubsection.21}%
+\contentsline {subsection}{\numberline {2.2}Prehľad využitia AI pri analýze historických dokumentov a šifier}{10}{subsection.22}%
+\contentsline {subsection}{\numberline {2.3}Voľba technológie pre detekciu}{10}{subsection.23}%
+\contentsline {subsubsection}{\numberline {2.3.1}Zdôvodnenie výberu YOLO (You Only Look Once)}{10}{subsubsection.24}%
+\contentsline {subsubsection}{\numberline {2.3.2}Predstavenie architektúry YOLO11}{11}{subsubsection.25}%
+\contentsline {subsection}{\numberline {2.4}Navrhovaný systém detekcie}{11}{subsection.26}%
+\contentsline {section}{\numberline {3}Príprava dátovej sady (Datasetu)}{12}{section.27}%
+\contentsline {subsection}{\numberline {3.1}Zdroj a charakteristika dát}{12}{subsection.28}%
+\contentsline {subsection}{\numberline {3.2}Popis dátovej sady}{12}{subsection.29}%
+\contentsline {subsection}{\numberline {3.3}Anotácia dát}{13}{subsection.30}%
+\contentsline {subsubsection}{\numberline {3.3.1}Definovanie tried pre detekciu objektov}{13}{subsubsection.31}%
+\contentsline {subsubsection}{\numberline {3.3.2}Proces a nástroje anotácie}{15}{subsubsection.36}%
+\contentsline {subsection}{\numberline {3.4}Rozdelenie dátovej sady}{15}{subsection.37}%
+\contentsline {subsection}{\numberline {3.5}Predspracovanie a augmentácia dát}{16}{subsection.38}%
+\contentsline {subsubsection}{\numberline {3.5.1}Pôvodná podoba datasetu}{16}{subsubsection.39}%
+\contentsline {subsubsection}{\numberline {3.5.2}Binarizácia dát}{17}{subsubsection.40}%
+\contentsline {subsubsection}{\numberline {3.5.3}Augmentácia dát}{17}{subsubsection.41}%
+\contentsline {section}{\numberline {4}Implementácia a experimenty}{18}{section.42}%
+\contentsline {subsection}{\numberline {4.1}Použité nástroje a prostredie}{18}{subsection.43}%
+\contentsline {subsection}{\numberline {4.2}Konfigurácia modelu YOLOv11}{19}{subsection.44}%
+\contentsline {subsection}{\numberline {4.3}Tréningové parametre}{19}{subsection.45}%
+\contentsline {subsection}{\numberline {4.4}Výber modelu}{19}{subsection.46}%
+\contentsline {subsubsection}{\numberline {4.4.1}YOLO11n}{20}{subsubsection.47}%
+\contentsline {subsubsection}{\numberline {4.4.2}YOLO11s}{21}{subsubsection.49}%
+\contentsline {subsubsection}{\numberline {4.4.3}YOLO11m}{22}{subsubsection.51}%
+\contentsline {subsubsection}{\numberline {4.4.4}YOLO11l}{23}{subsubsection.53}%
+\contentsline {subsubsection}{\numberline {4.4.5}YOLO11x}{24}{subsubsection.55}%
+\contentsline {subsubsection}{\numberline {4.4.6}Výber modelu pre ďalšie experimenty}{25}{subsubsection.57}%
+\contentsline {subsection}{\numberline {4.5}Experimenty s pôvodným datasetom}{26}{subsection.59}%
+\contentsline {subsubsection}{\numberline {4.5.1}Tréning pôvodného datasetu – 30 epoch}{26}{subsubsection.60}%
+\contentsline {subsubsection}{\numberline {4.5.2}Tréning pôvodného datasetu – 50 epoch}{26}{subsubsection.62}%
+\contentsline {subsubsection}{\numberline {4.5.3}Tréning pôvodného datasetu – 70 epoch}{27}{subsubsection.64}%
+\contentsline {subsection}{\numberline {4.6}Experimenty s binarizáciou datasetu}{27}{subsection.66}%
+\contentsline {subsubsection}{\numberline {4.6.1}Tréning binarizovaného datasetu – 30 epoch}{28}{subsubsection.67}%
+\contentsline {subsubsection}{\numberline {4.6.2}Tréning binarizovaného datasetu – 50 epoch}{28}{subsubsection.69}%
+\contentsline {subsubsection}{\numberline {4.6.3}Tréning binarizovaného datasetu – 70 epoch}{29}{subsubsection.71}%
+\contentsline {subsection}{\numberline {4.7}Experimenty s augmentáciou datasetu}{30}{subsection.73}%
+\contentsline {subsubsection}{\numberline {4.7.1}Tréning s augmentáciou – 30 epoch}{30}{subsubsection.74}%
+\contentsline {subsubsection}{\numberline {4.7.2}Tréning s augmentáciou – 50 epoch}{31}{subsubsection.76}%
+\contentsline {subsubsection}{\numberline {4.7.3}Tréning s augmentáciou – 70 epoch}{31}{subsubsection.78}%
+\contentsline {subsection}{\numberline {4.8}Experimenty s počtom epoch 200 a patience 20}{31}{subsection.80}%
+\contentsline {subsubsection}{\numberline {4.8.1}Tréning s počtom epoch 200 a patience 20 s pôvodným datasetom}{32}{subsubsection.81}%
+\contentsline {subsubsection}{\numberline {4.8.2}Tréning s počtom epoch 200 a patience 20 s binarizovaným datasetom}{32}{subsubsection.83}%
+\contentsline {subsubsection}{\numberline {4.8.3}Tréning s počtom epoch 200 a patience 20 s augmentovaným datasetom}{33}{subsubsection.85}%
+\contentsline {subsubsection}{\numberline {4.8.4}Porovnanie výsledkov}{34}{subsubsection.87}%
+\contentsline {subsection}{\numberline {4.9}Experimenty s počtom epoch 200 a patience 40}{34}{subsection.88}%
+\contentsline {subsubsection}{\numberline {4.9.1}Tréning s počtom epoch 200 a patience 40 s pôvodným datasetom}{35}{subsubsection.89}%
+\contentsline {subsubsection}{\numberline {4.9.2}Tréning s počtom epoch 200 a patience 40 s binarizovaným datasetom}{35}{subsubsection.91}%
+\contentsline {subsubsection}{\numberline {4.9.3}Tréning s počtom epoch 200 a patience 40 s augmentovaným datasetom}{36}{subsubsection.93}%
+\contentsline {subsubsection}{\numberline {4.9.4}Porovnanie výsledkov}{37}{subsubsection.95}%
+\contentsline {subsection}{\numberline {4.10}Experimenty s počtom epoch 300 a patience 50}{38}{subsection.96}%
+\contentsline {subsubsection}{\numberline {4.10.1}Tréning s počtom epoch 300 a patience 50 s pôvodným datasetom}{38}{subsubsection.97}%
+\contentsline {subsubsection}{\numberline {4.10.2}Tréning s počtom epoch 300 a patience 50 s binarizovaným datasetom}{39}{subsubsection.99}%
+\contentsline {subsubsection}{\numberline {4.10.3}Tréning s počtom epoch 300 a patience 50 s augmentovaným datasetom}{39}{subsubsection.101}%
+\contentsline {subsubsection}{\numberline {4.10.4}Porovnanie výsledkov}{40}{subsubsection.103}%
+\contentsline {subsection}{\numberline {4.11}Experiment s počtom epoch 300 bez použitia early stoppingu}{41}{subsection.104}%
+\contentsline {subsubsection}{\numberline {4.11.1}Experiment s počtom epoch 300}{41}{subsubsection.105}%
+\contentsline {subsubsection}{\numberline {4.11.2}Experiment s počtom epoch 300 s binarizovaným datasetom}{42}{subsubsection.107}%
+\contentsline {subsubsection}{\numberline {4.11.3}Experiment s počtom epoch 300 s augmentovaným datasetom}{43}{subsubsection.109}%
+\contentsline {subsubsection}{\numberline {4.11.4}Porovnanie výsledkov}{44}{subsubsection.111}%
+\contentsline {section}{\numberline {5}Výsledky a diskusia}{46}{section.112}%
+\contentsline {subsection}{\numberline {5.1}Prezentácia výsledkov tréningu}{46}{subsection.113}%
+\contentsline {subsubsection}{\numberline {5.1.1}Výsledky modelu trénovaného na pôvodnom datasete}{46}{subsubsection.114}%
+\contentsline {subsection}{\numberline {5.2}Prezentácia výsledkov tréningu}{46}{subsection.115}%
+\contentsline {subsection}{\numberline {5.3}Porovnanie výkonnosti modelov}{47}{subsection.116}%
+\contentsline {subsection}{\numberline {5.4}Analýza vplyvu predspracovania a augmentácie}{47}{subsection.117}%
+\contentsline {subsection}{\numberline {5.5}Kvalitatívna analýza výsledkov}{48}{subsection.118}%
+\contentsline {subsection}{\numberline {5.6}Diskusia}{49}{subsection.121}%
+\contentsline {subsection}{\numberline {5.7}Návrhy na možné vylepšenia}{50}{subsection.122}%
+\contentsline {section}{Z\'{a}ver}{51}{section*.123}%
+\contentsline {paragraph}{Zhrnutie dosiahnutých výsledkov}{51}{section*.123}%
+\contentsline {paragraph}{Prínos práce}{51}{section*.123}%
+\contentsline {paragraph}{Možnosti ďalšieho výskumu}{51}{section*.123}%
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{52}{section*.124}%
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 
@@ -145,21 +177,11 @@
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\babel@toc {slovak}{}\relax 
-\contentsline {section}{Pr\'{i}lohy}{I}{section*.78}%
-\contentsline {section}{\numberline {A}Použitie umelej inteligencie}{II}{section.80}%
-\contentsline {section}{\numberline {B}Ukážka datasetu}{III}{section.83}%
-\contentsline {section}{\numberline {C}{Detailnejšie grafy alebo tabuľky}}{V}{section.89}%
-\contentsline {section}{\numberline {D}Dôležité časti kódu}{VIII}{section.97}%
-\contentsline {section}{\numberline {E}Technická príručka}{XIV}{section.306}%
-\contentsline {paragraph}{Požiadavky na prostredie}{XIV}{priloh.307}%
-\contentsline {paragraph}{Použitie natrénovaných váh YOLO}{XIV}{lstnumber.310}%
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.125}%
+\contentsline {section}{\numberline {A}Použitie umelej inteligencie}{II}{section.127}%
+\contentsline {section}{\numberline {B}Ukážka datasetu}{III}{section.130}%
+\contentsline {section}{\numberline {C}{Detailnejšie grafy alebo tabuľky}}{V}{section.136}%
+\contentsline {section}{\numberline {D}Dôležité časti kódu}{VIII}{section.144}%
+\contentsline {section}{\numberline {E}Technická príručka}{XIV}{section.353}%
+\contentsline {paragraph}{Požiadavky na prostredie}{XIV}{priloh.354}%
+\contentsline {paragraph}{Použitie natrénovaných váh YOLO}{XIV}{lstnumber.357}%
