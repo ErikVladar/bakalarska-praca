@@ -93,9 +93,6 @@
 \contentsline {subsection}{\numberline {5.6}Diskusia}{49}{subsection.121}%
 \contentsline {subsection}{\numberline {5.7}Návrhy na možné vylepšenia}{50}{subsection.122}%
 \contentsline {section}{Z\'{a}ver}{51}{section*.123}%
-\contentsline {paragraph}{Zhrnutie dosiahnutých výsledkov}{51}{section*.123}%
-\contentsline {paragraph}{Prínos práce}{51}{section*.123}%
-\contentsline {paragraph}{Možnosti ďalšieho výskumu}{51}{section*.123}%
 \contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{52}{section*.124}%
 \babel@toc {slovak}{}\relax 
 \babel@toc {slovak}{}\relax 
