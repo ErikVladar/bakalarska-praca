@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [1] Config.pm:310> INFO - Logfile is 'main.blg'
-[351] biber-darwin:340> INFO - === Fri Jun  5, 2026, 02:36:13
-[451] Biber.pm:419> INFO - Reading 'main.bcf'
-[1108] Biber.pm:979> INFO - Found 24 citekeys in bib section 0
-[1161] Biber.pm:4419> INFO - Processing section 0
-[1187] Biber.pm:4610> INFO - Looking for bibtex file 'includes/bibliography.bib' for section 0
-[1198] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1313] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/bibliography.bib'
-[2014] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2015] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2015] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'sk-SK'
-[2081] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[2146] bbl.pm:763> INFO - Output to main.bbl
-[2149] Biber.pm:131> WARN - ISBN '978-88-87612-44-2' in entry 'tranchedino2011secret' is invalid - run biber with '--validate_datamodel' for details.
-[2149] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'HLA1220' is not an integer - this will probably not sort properly.
-[2149] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'HLA1223' is not an integer - this will probably not sort properly.
-[2149] Biber.pm:133> INFO - WARNINGS: 3
+[260] biber-darwin:340> INFO - === Fri Jun  5, 2026, 22:58:14
+[307] Biber.pm:419> INFO - Reading 'main.bcf'
+[844] Biber.pm:979> INFO - Found 24 citekeys in bib section 0
+[903] Biber.pm:4419> INFO - Processing section 0
+[981] Biber.pm:4610> INFO - Looking for bibtex file 'includes/bibliography.bib' for section 0
+[993] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1119] bibtex.pm:1519> INFO - Found BibTeX data source 'includes/bibliography.bib'
+[1845] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1846] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1846] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'sk-SK'
+[1895] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1938] bbl.pm:763> INFO - Output to main.bbl
+[1938] Biber.pm:131> WARN - ISBN '978-88-87612-44-2' in entry 'tranchedino2011secret' is invalid - run biber with '--validate_datamodel' for details.
+[1938] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'HLA1220' is not an integer - this will probably not sort properly.
+[1938] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'HLA1223' is not an integer - this will probably not sort properly.
+[1938] Biber.pm:133> INFO - WARNINGS: 3

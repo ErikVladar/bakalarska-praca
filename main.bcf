@@ -2371,3 +2371,79 @@
       <bcf:constraint type="data" datatype="ismn">
         <bcf:field>ismn</bcf:field>
       </bcf:constraint>
+      <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
+        <bcf:field>gender</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+  </bcf:datamodel>
+  <!-- CITATION DATA -->
+  <!-- SECTION 0 -->
+  <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex">includes/bibliography.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="0">
+    <bcf:citekey order="9" intorder="1">antal2022wrong</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">kahn1996codebreakers</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">tranchedino2011secret</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">tranchedino2011secret</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">ritter1990substitution</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">olson2007robust</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">kahn1996codebreakers</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">kahn1996codebreakers</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">kahn1996codebreakers</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">kahn1996codebreakers</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">ultralytics_yolo11_detection</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">redmon2016yolo</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">ren2015faster</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">girshick2014rcnn</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">redmon2016yolo</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">liu2016ssd</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">likforman2017text</bcf:citekey>
+    <bcf:citekey order="24" intorder="2">casey1996survey</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">oliveira2018dhsegment</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">xu2020layoutlm</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">simistira2017icdar</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">zhai2019deep</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">wigington2018start</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">michael2018transkribus</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">gruning2019read</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">redmon2016yolo</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">redmon2016yolo</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">redmon2018yolov3</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">tranchedino2011secret</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">tranchedino2011secret</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">tranchedino2011secret</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">tranchedino2011secret</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">ultralytics2023yolo</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">ultralytics_batch</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">HLA1223</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">HLA1223</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">HLA1220</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">HLA1220</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="none">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>

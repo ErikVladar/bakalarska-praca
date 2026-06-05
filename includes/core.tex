@@ -113,7 +113,7 @@ Táto kapitola sa venuje analýze existujúcich prístupov k segmentácii a dete
     \subsection{Prehľad využitia AI pri analýze historických dokumentov a šifier}
     Umelá inteligencia sa dnes využíva na analýzu a spracovanie historických dokumentov vrátane šifrovacích kľúčov. Platformy ako Transkribus umožňujú automatickú transkripciu rukou písaných textov pomocou pokročilých modelov založených na rekurentných a konvolučných neurónových sieťach \cite{michael2018transkribus}. Tieto nástroje dokážu rozpoznať aj veľmi špecifické písma, adaptovať sa na rôzne jazyky a zvládnuť aj poškodené alebo neúplné zápisy. AI sa využíva nielen na rozpoznávanie samotného textu, ale aj na analýzu rozloženia stránky, detekciu prvkov, ako sú tabuľky, symboly alebo špecifické znaky kľúčov \cite{gruning2019read}. Moderné AI systémy tak značne urýchľujú a spresňujú výskum historických šifier a umožňujú efektívnu digitalizáciu archívov.
     \subsection{Voľba technológie pre detekciu}
-    Pri výbere technológie pre detekciu častí historických rukou písaných šifrovacích kľúčov je potrebné zohľadniť rozličné druhy písma, prítomnosť šumu a potrebu detegovať rozličné objekty. Moderné detekčné architektúry založené na hlbokom učení, ako YOLO (You Only Look Once)\cite{redmon2016yolo}, ponúkajú vysokú presnosť pri spracovaní rôznych typov dát. YOLO je vhodné pre lokalizáciu a zaradenie viacero objektov rôznych veľkostí v jednom kroku.
+    Pri výbere technológie pre detekciu častí historických rukou písaných šifrovacích kľúčov je potrebné zohľadniť rozličné druhy písma, prítomnosť šumu a potrebu detegovať rozličné objekty. Moderné detekčné architektúry založené na hlbokom učení, ako YOLO (You Only Look Once)\cite{redmon2016yolo}, ponúkajú vysokú presnosť pri spracovaní rôznych typov dát. YOLO je vhodné pre lokalizáciu a zaradenie viacerých objektov rôznych veľkostí v jednom kroku.
         \subsubsection{Zdôvodnenie výberu YOLO (You Only Look Once)}
         YOLO je jedným z najefektívnejších detekčných algoritmov v oblasti počítačového videnia. Hlavnou výhodou YOLO je schopnosť spracovať celý obraz naraz, čo výrazne zrýchľuje detekciu objektov. Algoritmus rozdeľuje obraz na mriežku a v každej bunke predikuje ohraničujúce obdĺžniky (bounding boxes) a pravdepodobnosti tried. Vďaka tomu dokáže detegovať aj malé objekty a je robustný voči rôznym šumom a deformáciám, čo je pri historických rukopisoch veľmi dôležité. YOLO je dobre dokumentovaný a existuje množstvo implementácií a predtrénovaných modelov, čo urýchľuje vývoj a testovanie \cite{redmon2016yolo}.
         \subsubsection{Predstavenie architektúry YOLO11}
@@ -211,7 +211,7 @@ Príprava kvalitného datasetu predstavuje dôležitý krok v úspešnom vývoji
     
         Prvým krokom predspracovania bola konverzia všetkých obrazov do jednotného formátu PNG bez kompresie, aby sa predišlo stratám kvality. Farebné obrazy boli v tejto fáze zachované pre možnú analýzu farebných charakteristík atramentov a papiera.
         \subsubsection{Binarizácia dát}
-        Binarizácia predstavuje spôsob spracovania, ktorý transformuje farebné alebo sivé obrazy na čiernobiele reprezentácie, kde text a grafické elementy sú oddelené od pozadia. Pre historické dokumenty s degradáciou a nerovnomerným osvetlením preukázala výnimočnú účinnosť pri spracovaní degradovaných rukopisov. Tento prístup zabezpečil optimálnu kvalitu binarizácie pre špecifické charakteristiky týchto dokumentov. Binarizácia bolavykonaná viackrát, keďže vyhodnotenie šumu nebolo vždy úspešné.
+        Binarizácia predstavuje spôsob spracovania, ktorý transformuje farebné alebo sivé obrazy na čiernobiele reprezentácie, kde text a grafické elementy sú oddelené od pozadia. Pre historické dokumenty s degradáciou a nerovnomerným osvetlením preukázala výnimočnú účinnosť pri spracovaní degradovaných rukopisov. Tento prístup zabezpečil optimálnu kvalitu binarizácie pre špecifické charakteristiky týchto dokumentov. Binarizácia bola vykonaná viackrát, keďže vyhodnotenie šumu nebolo vždy úspešné.
 
         \begin{figure}[H]
             \centering
@@ -239,7 +239,15 @@ Príprava kvalitného datasetu predstavuje dôležitý krok v úspešnom vývoji
 
 \section{Implementácia a experimenty}
 V tejto kapitole je popísaný proces implementácie a experimentálneho overenia detekčných modelov na úlohe detekcie komponentov historických rukou písaných nomenklátorových šifrovacích kľúčov. Cieľom experimentov bolo porovnať výkonnosť rôznych variantov modelu YOLO na viacerých verziách datasetu (pôvodný, binarizovaný, augmentovaný) a vyhodnotiť vplyv jednotlivých spracovaní na presnosť detekcie. Kapitola sa venuje výberu nástrojov,  konfigurácii modelov, nastaveniu tréningových parametrov, priebehu tréningu a použitiu hodnotiacich metrík.
-    \subsection{Použité nástroje a prostredie}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/diagram.png}
+        \caption{Znázornenie postupu vyhodnocovania}
+        \label{fig:aug_code}
+    \end{figure}
+
+\subsection{Použité nástroje a prostredie}
     Na implementáciu a experimentovanie boli využité open-source nástroje a knižnice pre spracovanie obrazu a trénovanie hlbokých neurónových sietí. Hlavným frameworkom bol PyTorch v kombinácii s knižnicou Ultralytics\cite{ultralytics2023yolo} YOLO11, ktorá poskytuje optimalizované implementácie najnovších architektúr YOLO. Pre anotáciu a vizualizáciu výsledkov boli použité vlastné skripty v Python 3.11.
     
     Výpočtové experimenty prebiehali na zariadení s grafickou kartou NVIDIA TESLA T4 (16GB VRAM). Tento hardvér umožnil efektívny tréning aj najväčších variantov modelu YOLO11 v krátkom čase.
@@ -268,6 +276,7 @@ V tejto kapitole je popísaný proces implementácie a experimentálneho overeni
     \end{itemize}
     
     Konfiguračné súbory boli spravované pomocou nástroja labelme2yolo do formátu YAML. Labelme2yolo tiež štandardne prerozdelilo dataset pre tréning a validáciu dát.
+
     \subsection{Tréningové parametre}
     Tréning modelov prebiehal v niekoľkých fázach. Hlavnými premennými boli počet epoch, veľkosť batchu, vstupná veľkosť obrázkov a samotný výber modelu. Pre každý variant modelu a každú verziu datasetu (pôvodný, binarizovaný, augmentovaný) bolo experimentálne nastavené rozmedzie na 30-300 epoch. Počiatočné tréningy boli realizované na 30-70 epoch, pričom na základe priebehu validačnej straty bol počet epoch zvyšovaný až do dosiahnutia optimálneho výkonu. Nižší počet epoch slúžil na výber správneho modelu.
 
@@ -277,7 +286,7 @@ V tejto kapitole je popísaný proces implementácie a experimentálneho overeni
     
             Výsledky ukázali, že menšie modely (yolo11n.pt, yolo11s.pt) boli schopné naučiť sa požadované vzory. Ich menšia veľkosť vytvorila priestor pre vyššie hodnoty hyperparametrov, čím sa dokázali v efektívnosti vyrovnať väčším modelom.
             
-            Stredné a veľké modely (yolo11m.pt, yolo11l.pt, yolo11x.pt), napriek ich veľkosti, nedosiahli väčšiu presnosť. Ich tréning bol náchylnejší na pretrénovanie a vzhľadom na ich náročnosť sa musela pamäť uvoľniť znížením hodnôt premenných, ktoré zefektívneli trénovanie na menších modeloch.
+            Stredné a veľké modely (yolo11m.pt, yolo11l.pt, yolo11x.pt), napriek ich veľkosti, nedosiahli väčšiu presnosť. Ich tréning bol náchylnejší na pretrénovanie a vzhľadom na ich náročnosť sa musela pamäť uvoľniť znížením hodnôt premenných, ktoré zefektívnili trénovanie na menších modeloch.
             
             Po zvýšení počtu epoch a aktivácií early stoppingu sa však podarilo dosiahnuť stabilnejšie výsledky.
             \subsubsection{YOLO11n}
@@ -716,7 +725,7 @@ V tejto kapitole je popísaný proces implementácie a experimentálneho overeni
                     \label{tab:yolo11s_augmented_earlystop_20p}
                 \end{table}
 
-                Tréning zahŕňal maximálne 200 epoch a bol kontrolovaný mechanizmom predčasného zastavenia (early stopping) s hodnotou patience 20. Proces trenovania sa zastavil po dosiahnutí 111 epoch. Dosiahnuté výsledky zahrňovali hodnotu mAP@0.5 na úrovni 0.573 a recall 0.566.
+                Tréning zahŕňal maximálne 200 epoch a bol kontrolovaný mechanizmom predčasného zastavenia (early stopping) s hodnotou patience 20. Proces trénovania sa zastavil po dosiahnutí 111 epoch. Dosiahnuté výsledky zahŕňali hodnotu mAP@0.5 na úrovni 0.573 a recall 0.566.
 
                 \subsubsection{Porovnanie výsledkov}
 
@@ -911,7 +920,7 @@ V tejto kapitole je popísaný proces implementácie a experimentálneho overeni
 
                 Najlepšie výsledky boli dosiahnuté s použitím miernej augmentácie datasetu. Model trénoval celých 300 epoch a prekonal všetky predchádzajúce experimenty v hodnotách mAP@0.5 aj recall. Výsledky naznačujú, že vhodne nastavená augmentácia môže výrazne zlepšiť schopnosť modelu generalizovať, pričom je nutné vyhnúť sa príliš agresívnym transformačným technikám pri práci s dátami z dokumentov.
 
-                Na základe uvedených experimentov možno skonštatovať, že kombinácia miernej augmentácie, vyššieho počtu epoch a menej prísneho mechanizmu early stopping predstavuje najefektívnejšiu stratégiu. Môže však rozhodujúcim parametrom byť, že zbehnutie všetkych 300 epoch je lepšie než predčasné ukončenie tréningu, čo umožňuje modelu plne využít potenciál. 
+                Na základe uvedených experimentov možno skonštatovať, že kombinácia miernej augmentácie, vyššieho počtu epoch a menej prísneho mechanizmu early stopping predstavuje najefektívnejšiu stratégiu. Môže však rozhodujúcim parametrom byť, že zbehnutie všetkých 300 epoch je lepšie než predčasné ukončenie tréningu, čo umožňuje modelu plne využiť potenciál. 
 
             \subsection{Experiment s počtom epoch 300 bez použitia early stoppingu}
 
@@ -1090,7 +1099,7 @@ Táto kapitola prezentuje výsledky trénovania modelov YOLO11s na rôznych verz
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.95\textwidth]{img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png}
-        \caption{confusion matica k najlepšiemu meraniu (augemntácia s počtom epoch 300 a patience 50) - model YOLO11s}
+        \caption{confusion matica k najlepšiemu meraniu (augmentácia s počtom epoch 300 a patience 50) - model YOLO11s}
         \label{fig:matrix}
     \end{figure}
 

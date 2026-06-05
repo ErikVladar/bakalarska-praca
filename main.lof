@@ -1,0 +1,104 @@
+\babel@toc {slovak}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Ukážka nomenklátora z knihy \newline Francesco Tranchedino: Secret Diplomatic Documents \blx@tocontentsinit {0}\cite {tranchedino2011secret}\relax }}{5}{figure.caption.5}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Ukážka obrázku z datasetu HLA–HStAM, Best. 4d, (c) HLA–HStAM, f. 4d, Nr. 1220 \blx@tocontentsinit {0}\cite {HLA1220}\relax }}{15}{figure.caption.31}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Ukážka obrázku z datasetu HLA–HStAM, Best. 4d, (c) HLA–HStAM, f. 4d, Nr. 1220 \blx@tocontentsinit {0}\cite {HLA1220} s detailnejším pohľadom na anotované objekty\relax }}{16}{figure.caption.32}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Legenda k označeniu sekcií\relax }}{16}{figure.caption.33}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Počet zastúpení jednotlivých tried v datasete\relax }}{16}{figure.caption.34}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Binarizácia kde sa okrem šumu odstránili aj časti slova z knihy Francesco Tranchedino: Secret Diplomatic Documents \blx@tocontentsinit {0}\cite {tranchedino2011secret}\relax }}{19}{figure.caption.40}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Binarizácia kde sa šum odstránil a slovo zostalo čitateľné z knihy Francesco Tranchedino: Secret Diplomatic Documents \blx@tocontentsinit {0}\cite {tranchedino2011secret}\relax }}{20}{figure.caption.41}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Časť kódu pre augmentáciu dat\relax }}{21}{figure.caption.43}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Znázornenie postupu vyhodnocovania\relax }}{22}{figure.caption.45}%
+\contentsline {figure}{\numberline {10}{\ignorespaces confusion matica k najlepšiemu meraniu (augmentácia s počtom epoch 300 a patience 50) - model YOLO11s\relax }}{52}{figure.caption.122}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Niektoré prvky boli ťažko oddeliteľné, čo viedlo k nepresnému označeniu a ťažšiemu rozpoznaniu. Obrázok zo zbierky HLA–HStAM, Best. 4d, (c) HLA–HStAM, f. 4d, Nr. 1223 \blx@tocontentsinit {0}\cite {HLA1223}\relax }}{53}{figure.caption.123}%
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\babel@toc {slovak}{}\relax 
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Ukážka obrázku z datasetu pred spracovaním zo zbierky HLA–HStAM, Best. 4d, (c) HLA–HStAM, f. 4d, Nr. 1220 \blx@tocontentsinit {0}\cite {HLA1220}\relax }}{III}{figure.caption.135}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Ukážka obrázku z datasetu po spracovaní zo zbierky HLA–HStAM, Best. 4d, (c) HLA–HStAM, f. 4d, Nr. 1220 \blx@tocontentsinit {0}\cite {HLA1220}\relax }}{IV}{figure.caption.136}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Legenda k označeniu sekcií\relax }}{IV}{figure.caption.137}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Confusion matrix najlepšieho výsledku\relax }}{V}{figure.caption.141}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces F1 curve najlepšieho výsledku\relax }}{V}{figure.caption.142}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces P curve najlepšieho výsledku\relax }}{VI}{figure.caption.143}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces PR curve najlepšieho výsledku\relax }}{VI}{figure.caption.144}%
+\contentsline {figure}{\numberline {C.5}{\ignorespaces R curve najlepšieho výsledku\relax }}{VII}{figure.caption.145}%

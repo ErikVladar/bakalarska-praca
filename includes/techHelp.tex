@@ -21,12 +21,12 @@ pip install ultralytics
 
 
 \begin{itemize}
-    \item Umiestnite do premennej \texttt{model\_name} natrénované váhy (napr. \texttt{best.pt}) alebo zvoľte YOLO model.
+    \item Umiestnite do premennej \texttt{model\_name} natrénované váhy (napr. \texttt{best.pt}) alebo zvoľte model YOLO.
     \item Pripravte si adresár s obrázkami, ktoré chcete analyzovať.
 \end{itemize}
 Spustenie trénovacieho skriptu:
 \begin{lstlisting}[
-  caption={script.py},
+  caption={advancedTraining.py},
   label={lst:python},
   language=python,
   style=code-listing
@@ -35,16 +35,23 @@ from ultralytics import YOLO
 import pandas as pd
 import os
 
+
+# =====================================================
+# RESULTS STORAGE
+# =====================================================
+
+results_summary = []
+
 # =====================================================
 # DATASET PATHS
 # =====================================================
 
-DEFAULT_DATASET = "/path to YAML"
+DEFAULT_DATASET = "cesta k /YOLODataset/dataset.yaml"
 
-BINARY_DATASET = "/path to bin YAML"
+BINARY_DATASET = "cesta k /YOLODataset_binary/dataset.yaml"
 
 # =====================================================
-# TRENING
+# TRAINING FUNCTION
 # =====================================================
 
 def run_training(
@@ -71,10 +78,10 @@ def run_training(
         data=dataset_path,
 
         # max epochs
-        epochs=200,
+        epochs=300,
 
         # EARLY STOPPING
-        patience=40,
+        patience=50,
 
         # image size
         imgsz=640,
@@ -83,37 +90,78 @@ def run_training(
         batch=8,
 
         # =========================================
-        # AUGMENTACIA
+        # LIGHT DOCUMENT AUGMENTATION
         # =========================================
 
-        hsv_h=0.015 if augmentation else 0.0,
-        hsv_s=0.7 if augmentation else 0.0,
-        hsv_v=0.4 if augmentation else 0.0,
+        hsv_h=0.01 if augmentation else 0.0,
 
-        degrees=10 if augmentation else 0.0,
+        hsv_s=0.3 if augmentation else 0.0,
 
-        translate=0.1 if augmentation else 0.0,
+        hsv_v=0.2 if augmentation else 0.0,
 
-        scale=0.5 if augmentation else 0.0,
+        degrees=3 if augmentation else 0.0,
 
-        shear=10 if augmentation else 0.0,
+        translate=0.05 if augmentation else 0.0,
 
+        scale=0.15 if augmentation else 0.0,
+
+        shear=2 if augmentation else 0.0,
+
+        # disable flips for documents
         fliplr=0.0,
         flipud=0.0,
+
+        # IMPORTANT FOR DOCUMENTS
+        mosaic=0.0 if augmentation else 1.0,
 
         # =========================================
         # SAVE
         # =========================================
 
-        project="/custom output path",
+        project="/yolo_training",
 
         name=run_name
     )
 
+    # =============================================
+    # READ RESULTS CSV
+    # =============================================
 
+    results_path = f"/yolo_training/{run_name}/results.csv"
+
+    results_csv = pd.read_csv(results_path)
+
+    completed_epochs = len(results_csv)
+
+    # =============================================
+    # SAVE SUMMARY
+    # =============================================
+
+    results_summary.append({
+
+        "Run": run_name,
+
+        "Dataset": dataset_path.split("/")[-2],
+
+        "Augmentation": augmentation,
+
+        "Max Epochs": 300,
+
+        "Completed Epochs": completed_epochs,
+
+        "Patience": 50,
+
+        "mAP50": metrics.results_dict.get("metrics/mAP50(B)", None),
+
+        "mAP50-95": metrics.results_dict.get("metrics/mAP50-95(B)", None),
+
+        "Precision": metrics.results_dict.get("metrics/precision(B)", None),
+
+        "Recall": metrics.results_dict.get("metrics/recall(B)", None)
+    })
 
 # =====================================================
-# DEF DATASET
+# DEFAULT DATASET
 # =====================================================
 
 run_training(
@@ -122,13 +170,13 @@ run_training(
 
     dataset_path=DEFAULT_DATASET,
 
-    run_name="yolo11s_default_earlystop_p40",
+    run_name="yolo11s_default_earlystop_p50",
 
     augmentation=False
 )
 
 # =====================================================
-# BIN DATASET
+# BINARY DATASET
 # =====================================================
 
 run_training(
@@ -137,13 +185,13 @@ run_training(
 
     dataset_path=BINARY_DATASET,
 
-    run_name="yolo11s_binary_earlystop_p40",
+    run_name="yolo11s_binary_earlystop_p50",
 
     augmentation=False
 )
 
 # =====================================================
-# AUG DATASET
+# AUGMENTED DATASET
 # =====================================================
 
 run_training(
@@ -152,15 +200,43 @@ run_training(
 
     dataset_path=DEFAULT_DATASET,
 
-    run_name="yolo11s_augmented_earlystop_p40",
+    run_name="yolo11s_augmented_lightaug_p50",
 
     augmentation=True
 )
+
+# =====================================================
+# CREATE SUMMARY TABLE
+# =====================================================
+
+df = pd.DataFrame(results_summary)
+
+# =====================================================
+# SAVE CSV
+# =====================================================
+
+csv_path = "cesta k csv"
+
+df.to_csv(csv_path, index=False)
+
+# =====================================================
+# PRINT SUMMARY
+# =====================================================
+
+print("\n====================================")
+print("ALL TRAININGS FINISHED")
+print("====================================")
+
+print("\nSUMMARY:")
+print(df)
+
+print("\nCSV saved to:")
+print(csv_path)
         
 \end{lstlisting}
 
 \begin{lstlisting}[
-  caption={zadajte do terminálu (treba sa nachádzať v adresári)},
+    caption={Zadajte do terminálu (treba sa nachádzať v adresári projektu)},
   label={lst:python},
   language=python,
   style=code-listing
@@ -174,11 +250,10 @@ Pre správne spustenie skriptov a použitie natrénovaných váh je potrebné ma
 
 \begin{itemize}
     \item Python (odporúčaná verzia: 3.8 alebo novšia)
-    \item Ultralytics (knižnica pre YOLO modely)
+    \item Ultralytics (knižnica pre modely YOLO)
     \item OpenCV (na spracovanie obrázkov)
     \item NumPy (na prácu s poľami a obrazovými dátami)
-(voliteľne) albumentations (ak chceš použiť augmentačné skripty)
-    \item albumentations (ak chceš použiť augmentačné skripty)
+    \item \textit{voliteľne}: albumentations (ak chcete použiť augmentačné skripty)
 \end{itemize}
 Inštalácia potrebných balíkov (v termináli):
 \begin{lstlisting}[
@@ -193,14 +268,14 @@ pip install ultralytics opencv-python numpy albumentations
 
 \paragraph{Použitie natrénovaných váh YOLO}:
 
-Príprava súborov
+Príprava súborov:
 \begin{itemize}
     \item Umiestnite natrénované váhy (napr. best.pt) do zvoleného adresára.
-    \item Pripravte si adresár s obrázkami, ktoré chceš analyzovať.
+    \item Pripravte si adresár s obrázkami, ktoré chcete analyzovať.
 \end{itemize}
 Spustenie detekčného skriptu:
 \begin{lstlisting}[
-  caption={script.py},
+  caption={plottingVal.py},
   label={lst:python},
   language=python,
   style=code-listing

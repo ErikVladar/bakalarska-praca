@@ -5,7 +5,6 @@
       "command": "/Library/TeX/texbin/latexmk",
       "args": [
         "-synctex=1",
-        "-g",
         "-interaction=nonstopmode",
         "-file-line-error",
         "-pdf",
