@@ -1,6 +1,9 @@
 add_cus_dep('glo', 'gls', 0, 'run_makeglossaries');
 add_cus_dep('acn', 'acr', 0, 'run_makeglossaries');
 
+$pdflatex = '/Library/TeX/texbin/pdflatex %O %S';
+$biber = '/Library/TeX/texbin/biber %O %S';
+
 sub run_makeglossaries {
 
   my ($base_name, $path) = fileparse( $_[0] );

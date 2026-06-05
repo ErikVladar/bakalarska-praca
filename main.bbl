@@ -19,168 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{kahn1996codebreakers}{book}{}
-      \name{author}{1}{}{%
-        {{hash=aac81eaa5d461dc0fd75381417053169}{%
-           family={Kahn},
-           familyi={K\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Scribner}%
-      }
-      \strng{namehash}{aac81eaa5d461dc0fd75381417053169}
-      \strng{fullhash}{aac81eaa5d461dc0fd75381417053169}
-      \strng{bibnamehash}{aac81eaa5d461dc0fd75381417053169}
-      \strng{authorbibnamehash}{aac81eaa5d461dc0fd75381417053169}
-      \strng{authornamehash}{aac81eaa5d461dc0fd75381417053169}
-      \strng{authorfullhash}{aac81eaa5d461dc0fd75381417053169}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0684831305}
-      \field{title}{The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet}
-      \field{year}{1996}
-    \endentry
-    \entry{tranchedino2011secret}{book}{}
-      \name{author}{1}{}{%
-        {{hash=927fdd9d2a4893552318eedcf985a6a2}{%
-           family={Tranchedino},
-           familyi={T\bibinitperiod},
-           given={Francesco},
-           giveni={F\bibinitperiod}}}%
-      }
-      \name{editor}{1}{}{%
-        {{hash=2ebc26f0ef63230eac8c912d6e7c0e64}{%
-           family={Scarsella},
-           familyi={S\bibinitperiod},
-           given={Alessandro},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Milan}%
-      }
-      \list{publisher}{1}{%
-        {Imago}%
-      }
-      \strng{namehash}{927fdd9d2a4893552318eedcf985a6a2}
-      \strng{fullhash}{927fdd9d2a4893552318eedcf985a6a2}
-      \strng{bibnamehash}{927fdd9d2a4893552318eedcf985a6a2}
-      \strng{authorbibnamehash}{927fdd9d2a4893552318eedcf985a6a2}
-      \strng{authornamehash}{927fdd9d2a4893552318eedcf985a6a2}
-      \strng{authorfullhash}{927fdd9d2a4893552318eedcf985a6a2}
-      \strng{editorbibnamehash}{2ebc26f0ef63230eac8c912d6e7c0e64}
-      \strng{editornamehash}{2ebc26f0ef63230eac8c912d6e7c0e64}
-      \strng{editorfullhash}{2ebc26f0ef63230eac8c912d6e7c0e64}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-88-87612-44-2}
-      \field{note}{Facsimile edition}
-      \field{title}{Secret Diplomatic Documents}
-      \field{year}{2011}
-    \endentry
-    \entry{ritter1990substitution}{article}{}
-      \name{author}{1}{}{%
-        {{hash=e55f17ab6cc5f788377e9dcc17ed68a6}{%
-           family={Ritter},
-           familyi={R\bibinitperiod},
-           given={Terry},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Taylor \& Francis}%
-      }
-      \strng{namehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
-      \strng{fullhash}{e55f17ab6cc5f788377e9dcc17ed68a6}
-      \strng{bibnamehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
-      \strng{authorbibnamehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
-      \strng{authornamehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
-      \strng{authorfullhash}{e55f17ab6cc5f788377e9dcc17ed68a6}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Cryptologia}
-      \field{number}{4}
-      \field{title}{Substitution cipher with pseudo-random shuffling: The dynamic substitution combiner}
-      \field{volume}{14}
-      \field{year}{1990}
-      \field{pages}{289\bibrangedash 303}
-      \range{pages}{15}
-    \endentry
-    \entry{olson2007robust}{article}{}
-      \name{author}{1}{}{%
-        {{hash=8f743eebb2f64f75592e54ba06f94320}{%
-           family={Olson},
-           familyi={O\bibinitperiod},
-           given={Edwin},
-           giveni={E\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Taylor \& Francis}%
-      }
-      \strng{namehash}{8f743eebb2f64f75592e54ba06f94320}
-      \strng{fullhash}{8f743eebb2f64f75592e54ba06f94320}
-      \strng{bibnamehash}{8f743eebb2f64f75592e54ba06f94320}
-      \strng{authorbibnamehash}{8f743eebb2f64f75592e54ba06f94320}
-      \strng{authornamehash}{8f743eebb2f64f75592e54ba06f94320}
-      \strng{authorfullhash}{8f743eebb2f64f75592e54ba06f94320}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Cryptologia}
-      \field{number}{4}
-      \field{title}{Robust dictionary attack of short simple substitution ciphers}
-      \field{volume}{31}
-      \field{year}{2007}
-      \field{pages}{332\bibrangedash 342}
-      \range{pages}{11}
-    \endentry
-    \entry{vatsa2012novel}{article}{}
-      \name{author}{3}{}{%
-        {{hash=57d842c507b8f54be1c2b6f936333330}{%
-           family={Vatsa},
-           familyi={V\bibinitperiod},
-           given={Avimanyou\bibnamedelima Kumar},
-           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=59e7d87d7a01d0fd35cd138a4213c932}{%
-           family={Mohan},
-           familyi={M\bibinitperiod},
-           given={Tanmeya},
-           giveni={T\bibinitperiod}}}%
-        {{hash=d7bb29b1c8d9b7aea15cdf4c76946a5d}{%
-           family={Vatsa},
-           familyi={V\bibinitperiod},
-           given={Shobha},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{2}{%
-        {IAES Institute of Advanced Engineering}%
-        {Science}%
-      }
-      \strng{namehash}{f822216a86f666d5ed3f8778930ce7f8}
-      \strng{fullhash}{f822216a86f666d5ed3f8778930ce7f8}
-      \strng{bibnamehash}{f822216a86f666d5ed3f8778930ce7f8}
-      \strng{authorbibnamehash}{f822216a86f666d5ed3f8778930ce7f8}
-      \strng{authornamehash}{f822216a86f666d5ed3f8778930ce7f8}
-      \strng{authorfullhash}{f822216a86f666d5ed3f8778930ce7f8}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Information and Network Security}
-      \field{number}{4}
-      \field{title}{Novel cipher technique using substitution method}
-      \field{volume}{1}
-      \field{year}{2012}
-      \field{pages}{313}
-      \range{pages}{1}
-    \endentry
     \entry{antal2022wrong}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=246b81d69c9ea75c08660e655dd1a18e}{%
@@ -221,14 +59,166 @@
       \strng{editorbibnamehash}{a1dd502bfaf518d837f58940c3994c00}
       \strng{editornamehash}{a1dd502bfaf518d837f58940c3994c00}
       \strng{editorfullhash}{a1dd502bfaf518d837f58940c3994c00}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{HistoCrypt 2022}
       \field{isbn}{978-91-7929-397-0}
       \field{title}{Wrong design of cipher keys: Analysis of historical cipher keys from the Hessisches Staatsarchiv Marburg used in the Thirty Years’ War}
       \field{year}{2022}
+    \endentry
+    \entry{kahn1996codebreakers}{book}{}
+      \name{author}{1}{}{%
+        {{hash=aac81eaa5d461dc0fd75381417053169}{%
+           family={Kahn},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Scribner}%
+      }
+      \strng{namehash}{aac81eaa5d461dc0fd75381417053169}
+      \strng{fullhash}{aac81eaa5d461dc0fd75381417053169}
+      \strng{bibnamehash}{aac81eaa5d461dc0fd75381417053169}
+      \strng{authorbibnamehash}{aac81eaa5d461dc0fd75381417053169}
+      \strng{authornamehash}{aac81eaa5d461dc0fd75381417053169}
+      \strng{authorfullhash}{aac81eaa5d461dc0fd75381417053169}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0684831305}
+      \field{title}{The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet}
+      \field{year}{1996}
+    \endentry
+    \entry{tranchedino2011secret}{book}{}
+      \name{author}{1}{}{%
+        {{hash=927fdd9d2a4893552318eedcf985a6a2}{%
+           family={Tranchedino},
+           familyi={T\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=2ebc26f0ef63230eac8c912d6e7c0e64}{%
+           family={Scarsella},
+           familyi={S\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Milan}%
+      }
+      \list{publisher}{1}{%
+        {Imago}%
+      }
+      \strng{namehash}{927fdd9d2a4893552318eedcf985a6a2}
+      \strng{fullhash}{927fdd9d2a4893552318eedcf985a6a2}
+      \strng{bibnamehash}{927fdd9d2a4893552318eedcf985a6a2}
+      \strng{authorbibnamehash}{927fdd9d2a4893552318eedcf985a6a2}
+      \strng{authornamehash}{927fdd9d2a4893552318eedcf985a6a2}
+      \strng{authorfullhash}{927fdd9d2a4893552318eedcf985a6a2}
+      \strng{editorbibnamehash}{2ebc26f0ef63230eac8c912d6e7c0e64}
+      \strng{editornamehash}{2ebc26f0ef63230eac8c912d6e7c0e64}
+      \strng{editorfullhash}{2ebc26f0ef63230eac8c912d6e7c0e64}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-88-87612-44-2}
+      \field{note}{Facsimile edition}
+      \field{title}{Secret Diplomatic Documents}
+      \field{year}{2011}
+    \endentry
+    \entry{ritter1990substitution}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e55f17ab6cc5f788377e9dcc17ed68a6}{%
+           family={Ritter},
+           familyi={R\bibinitperiod},
+           given={Terry},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
+      \strng{fullhash}{e55f17ab6cc5f788377e9dcc17ed68a6}
+      \strng{bibnamehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
+      \strng{authorbibnamehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
+      \strng{authornamehash}{e55f17ab6cc5f788377e9dcc17ed68a6}
+      \strng{authorfullhash}{e55f17ab6cc5f788377e9dcc17ed68a6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cryptologia}
+      \field{number}{4}
+      \field{title}{Substitution cipher with pseudo-random shuffling: The dynamic substitution combiner}
+      \field{volume}{14}
+      \field{year}{1990}
+      \field{pages}{289\bibrangedash 303}
+      \range{pages}{15}
+    \endentry
+    \entry{olson2007robust}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8f743eebb2f64f75592e54ba06f94320}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{fullhash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{bibnamehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{authorbibnamehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{authornamehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{authorfullhash}{8f743eebb2f64f75592e54ba06f94320}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cryptologia}
+      \field{number}{4}
+      \field{title}{Robust dictionary attack of short simple substitution ciphers}
+      \field{volume}{31}
+      \field{year}{2007}
+      \field{pages}{332\bibrangedash 342}
+      \range{pages}{11}
+    \endentry
+    \entry{ultralytics_yolo11_detection}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88f069848482a556e416f713d2819905}{%
+           family={{Ultralytics}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88f069848482a556e416f713d2819905}
+      \strng{fullhash}{88f069848482a556e416f713d2819905}
+      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authornamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Use Ultralytics YOLO11 for Object Detection and Tracking}
+      \field{urlday}{27}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-detection
+      \endverb
+      \verb{url}
+      \verb https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-detection
+      \endverb
     \endentry
     \entry{redmon2016yolo}{inproceedings}{}
       \name{author}{4}{}{%
@@ -259,8 +249,8 @@
       \strng{authorbibnamehash}{b5530443e433a4da53dbe3cf155225b4}
       \strng{authornamehash}{b5530443e433a4da53dbe3cf155225b4}
       \strng{authorfullhash}{b5530443e433a4da53dbe3cf155225b4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -298,8 +288,8 @@
       \strng{authorbibnamehash}{008a132af3e2d4ff15eb01a8fb4b005c}
       \strng{authornamehash}{008a132af3e2d4ff15eb01a8fb4b005c}
       \strng{authorfullhash}{008a132af3e2d4ff15eb01a8fb4b005c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -342,8 +332,8 @@
       \strng{authorbibnamehash}{9147daa2f6a058d5b8880ff5cf38abd6}
       \strng{authornamehash}{9147daa2f6a058d5b8880ff5cf38abd6}
       \strng{authorfullhash}{9147daa2f6a058d5b8880ff5cf38abd6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -399,8 +389,8 @@
       \strng{authorbibnamehash}{d5e1ac3dfe6687980f91e701611520ad}
       \strng{authornamehash}{d5e1ac3dfe6687980f91e701611520ad}
       \strng{authorfullhash}{d5e1ac3dfe6687980f91e701611520ad}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{European Conference on Computer Vision (ECCV)}
@@ -436,8 +426,8 @@
       \strng{authorbibnamehash}{09940930188e520fd361f1d26c8f5041}
       \strng{authornamehash}{09940930188e520fd361f1d26c8f5041}
       \strng{authorfullhash}{09940930188e520fd361f1d26c8f5041}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal on Document Analysis and Recognition (IJDAR)}
@@ -470,8 +460,8 @@
       \strng{authorbibnamehash}{8730e2fa6688e0eec8e00904f20d41c0}
       \strng{authornamehash}{8730e2fa6688e0eec8e00904f20d41c0}
       \strng{authorfullhash}{8730e2fa6688e0eec8e00904f20d41c0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -524,8 +514,8 @@
       \strng{authorbibnamehash}{713d5143e5808f8f5970805d9723da95}
       \strng{authornamehash}{713d5143e5808f8f5970805d9723da95}
       \strng{authorfullhash}{713d5143e5808f8f5970805d9723da95}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{14th IAPR International Conference on Document Analysis and Recognition (ICDAR)}
@@ -596,8 +586,8 @@
       \strng{authorbibnamehash}{cd52f18674fc8db81e9e72703a4c0e75}
       \strng{authornamehash}{cd52f18674fc8db81e9e72703a4c0e75}
       \strng{authorfullhash}{cd52f18674fc8db81e9e72703a4c0e75}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining (KDD '20)}
@@ -643,8 +633,8 @@
       \strng{authorbibnamehash}{92a9ff4a97710579d38ef26ba2e078e5}
       \strng{authornamehash}{92a9ff4a97710579d38ef26ba2e078e5}
       \strng{authorfullhash}{92a9ff4a97710579d38ef26ba2e078e5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{14th IAPR International Conference on Document Analysis and Recognition (ICDAR)}
@@ -690,8 +680,8 @@
       \strng{authorbibnamehash}{873c0aca0c79f39c0cb47b2fecb8c24a}
       \strng{authornamehash}{873c0aca0c79f39c0cb47b2fecb8c24a}
       \strng{authorfullhash}{873c0aca0c79f39c0cb47b2fecb8c24a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Pattern Recognition}
@@ -894,8 +884,8 @@
       \strng{authorbibnamehash}{e3b480c56f52be95ad68ce67e9708174}
       \strng{authornamehash}{e3b480c56f52be95ad68ce67e9708174}
       \strng{authorfullhash}{e3b480c56f52be95ad68ce67e9708174}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -911,6 +901,27 @@
       \verb{url}
       \verb https://arxiv.org/abs/1804.02767
       \endverb
+    \endentry
+    \entry{HLA1220}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cb2ba698b0fa0be8c1f677fc22e0625b}{%
+           family={{Hessisches Landesarchiv -- Hessisches Staatsarchiv Marburg}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{fullhash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{bibnamehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{authorbibnamehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{authornamehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{authorfullhash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Archívny fond}
+      \field{title}{Politische Akten nach Philipp dem Großmütigen: Kanzlei- und Geheimeratskorrespondenz (4d), Nr. 1220}
+      \field{year}{n.d.}
     \endentry
     \entry{ultralytics2023yolo}{misc}{}
       \true{moreauthor}
@@ -939,8 +950,8 @@
       \strng{authorbibnamehash}{1d8a45b55ff4ad67d45fe1421da592af}
       \strng{authornamehash}{1d8a45b55ff4ad67d45fe1421da592af}
       \strng{authorfullhash}{1d8a45b55ff4ad67d45fe1421da592af}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/ultralytics/ultralytics}}
@@ -960,8 +971,9 @@
       \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
       \strng{authornamehash}{88f069848482a556e416f713d2819905}
       \strng{authorfullhash}{88f069848482a556e416f713d2819905}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{[cit. 2026-05-23]}
@@ -973,6 +985,27 @@
       \verb{url}
       \verb https://www.ultralytics.com/glossary/batch-size
       \endverb
+    \endentry
+    \entry{HLA1223}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cb2ba698b0fa0be8c1f677fc22e0625b}{%
+           family={{Hessisches Landesarchiv -- Hessisches Staatsarchiv Marburg}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{fullhash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{bibnamehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{authorbibnamehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{authornamehash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \strng{authorfullhash}{cb2ba698b0fa0be8c1f677fc22e0625b}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Archívny fond}
+      \field{title}{Politische Akten nach Philipp dem Großmütigen: Kanzlei- und Geheimeratskorrespondenz (4d), Nr. 1223}
+      \field{year}{n.d.}
     \endentry
   \enddatalist
 \endrefsection

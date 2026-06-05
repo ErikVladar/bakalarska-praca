@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.1.25)  29 MAY 2026 02:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.1.25)  5 JUN 2026 02:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1084,6 +1084,21 @@ LaTeX Warning: Label `lst:python' multiply defined.
 
 LaTeX Warning: Label `lst:python' multiply defined.
 
+
+LaTeX Warning: Label `lst:python' multiply defined.
+
+
+LaTeX Warning: Label `lst:python' multiply defined.
+
+
+LaTeX Warning: Label `lst:python' multiply defined.
+
+
+LaTeX Warning: Label `lst:python' multiply defined.
+
+
+LaTeX Warning: Label `lst:python' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1207,51 +1222,51 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] [1]
-<includes/file-10.pdf, id=392, 597.51233pt x 845.0471pt>
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf>
-Package pdftex.def Info: includes/file-10.pdf  used on input line 37.
+<includes/file-19.pdf, id=388, 597.51233pt x 845.0471pt>
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf>
+Package pdftex.def Info: includes/file-19.pdf  used on input line 37.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf>
-Package pdftex.def Info: includes/file-10.pdf  used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf>
+Package pdftex.def Info: includes/file-19.pdf  used on input line 37.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
-<includes/file-10.pdf, id=395, page=1, 597.51233pt x 845.0471pt>
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 1>
-Package pdftex.def Info: includes/file-10.pdf , page1 used on input line 37.
+<includes/file-19.pdf, id=391, page=1, 597.51233pt x 845.0471pt>
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 1>
+Package pdftex.def Info: includes/file-19.pdf , page1 used on input line 37.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 1>
-Package pdftex.def Info: includes/file-10.pdf , page1 used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 1>
+Package pdftex.def Info: includes/file-19.pdf , page1 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 1>
-Package pdftex.def Info: includes/file-10.pdf , page1 used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 1>
+Package pdftex.def Info: includes/file-19.pdf , page1 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 1>
-Package pdftex.def Info: includes/file-10.pdf , page1 used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 1>
+Package pdftex.def Info: includes/file-19.pdf , page1 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 1>
-Package pdftex.def Info: includes/file-10.pdf , page1 used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 1>
+Package pdftex.def Info: includes/file-19.pdf , page1 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
- [2 <./includes/file-10.pdf>]
-<includes/file-10.pdf, id=428, page=2, 597.51233pt x 845.0471pt>
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 2>
-Package pdftex.def Info: includes/file-10.pdf , page2 used on input line 37.
+ [2 <./includes/file-19.pdf>]
+<includes/file-19.pdf, id=424, page=2, 597.51233pt x 845.0471pt>
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 2>
+Package pdftex.def Info: includes/file-19.pdf , page2 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 2>
-Package pdftex.def Info: includes/file-10.pdf , page2 used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 2>
+Package pdftex.def Info: includes/file-19.pdf , page2 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
-File: includes/file-10.pdf Graphic file (type pdf)
-<use includes/file-10.pdf, page 2>
-Package pdftex.def Info: includes/file-10.pdf , page2 used on input line 37.
+File: includes/file-19.pdf Graphic file (type pdf)
+<use includes/file-19.pdf, page 2>
+Package pdftex.def Info: includes/file-19.pdf , page2 used on input line 37.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
- [3 <./includes/file-10.pdf>] (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) (./includes/abstract.tex) [4] (./includes/abstractEN.tex) [5
+ [3 <./includes/file-19.pdf>] (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) (./includes/abstract.tex) [4] (./includes/abstractEN.tex) [5
 
 ] (./includes/thanks.tex) [6
 
@@ -1261,54 +1276,109 @@ Package pdftex.def Info: includes/file-10.pdf , page2 used on input line 37.
 
  [9]
 \mylenf=\skip138
- (./main.lof)
+ (./main.lof
+Overfull \hbox (18.75232pt too wide) in paragraph at lines 3--3
+ [][] [][][]\T1/lmr/m/n/12 (-20) Ukáºka ob-rázku z da-ta-setu HLA^^UHStAM, Best. 4d, (c) HLA^^UHStAM, 
+ []
+
+
+Overfull \hbox (18.75232pt too wide) in paragraph at lines 4--4
+ [][] [][][]\T1/lmr/m/n/12 (-20) Ukáºka ob-rázku z da-ta-setu HLA^^UHStAM, Best. 4d, (c) HLA^^UHStAM, 
+ []
+
+
+Overfull \hbox (16.74622pt too wide) in paragraph at lines 11--11
+ \T1/lmr/m/n/12 (-20) ozna-£e-niu a ´aº-²iemu roz-poz-na-niu. Ob-rá-zok zo zbierky HLA^^UHStAM, 
+ []
+
+
+Overfull \hbox (23.54758pt too wide) in paragraph at lines 96--96
+ [][] [][][]\T1/lmr/m/n/12 (-20) Ukáºka ob-rázku z da-ta-setu pred spra-co-va-ním zo zbierky HLA^^UHStAM, 
+ []
+
+
+Overfull \hbox (4.04237pt too wide) in paragraph at lines 97--97
+ [][] [][][]\T1/lmr/m/n/12 (-20) Ukáºka ob-rázku z da-ta-setu po spra-co-vaní zo zbierky HLA^^UHStAM, 
+ []
+
+)
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
- (./main.lot [10])
+ (./main.lot [10] [11])
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
- [11] (./main.lol
+ [12] (./main.lol
 Overfull \hbox (3.96545pt too wide) detected at line 1
  []\T1/lmr/m/n/12 VIII
  []
 
 
-Overfull \hbox (3.64272pt too wide) detected at line 5
+Overfull \hbox (3.96545pt too wide) detected at line 3
+ []\T1/lmr/m/n/12 XIII
+ []
+
+
+Overfull \hbox (3.64272pt too wide) detected at line 4
  []\T1/lmr/m/n/12 XIV
+ []
+
+
+Overfull \hbox (3.64272pt too wide) detected at line 6
+ []\T1/lmr/m/n/12 XVI
+ []
+
+
+Overfull \hbox (3.64272pt too wide) detected at line 7
+ []\T1/lmr/m/n/12 XIX
+ []
+
+
+Overfull \hbox (8.20808pt too wide) detected at line 8
+ []\T1/lmr/m/n/12 XXII
+ []
+
+
+Overfull \hbox (12.77345pt too wide) detected at line 9
+ []\T1/lmr/m/n/12 XXIII
+ []
+
+
+Overfull \hbox (12.77345pt too wide) detected at line 10
+ []\T1/lmr/m/n/12 XXIII
  []
 
 )
 \tf@lol=\write11
 \openout11 = `main.lol'.
 
- [12] (./includes/introduction.tex [1
+ [13] (./includes/introduction.tex [1
 
 
 
 
 ] [2]) [3] (./includes/core.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 10.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 11.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<img/img7.png, id=699, 6825.5pt x 4416.5pt>
+<img/img7.png, id=728, 6825.5pt x 4416.5pt>
 File: img/img7.png Graphic file (type png)
 <use img/img7.png>
-Package pdftex.def Info: img/img7.png  used on input line 16.
+Package pdftex.def Info: img/img7.png  used on input line 17.
 (pdftex.def)             Requested size: 432.48051pt x 279.80443pt.
- [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./img/img7.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 56.
+ [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./img/img7.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 54.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1316,60 +1386,79 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [6] [7] [8] [9] [10] [11] [12]
-<img/dataset_ukazka.png, id=787, 768.8725pt x 612.2875pt>
+ [6] [7] [8] [9] [10] [11] [12] [13]
+<img/dataset_ukazka.png, id=820, 768.8725pt x 612.2875pt>
 File: img/dataset_ukazka.png Graphic file (type png)
 <use img/dataset_ukazka.png>
-Package pdftex.def Info: img/dataset_ukazka.png  used on input line 171.
+Package pdftex.def Info: img/dataset_ukazka.png  used on input line 168.
 (pdftex.def)             Requested size: 432.48051pt x 344.41087pt.
-<img/dataset_closer.png, id=789, 399.4925pt x 201.75375pt>
+<img/dataset_closer.png, id=824, 399.4925pt x 201.75375pt>
 File: img/dataset_closer.png Graphic file (type png)
 <use img/dataset_closer.png>
-Package pdftex.def Info: img/dataset_closer.png  used on input line 177.
+Package pdftex.def Info: img/dataset_closer.png  used on input line 174.
 (pdftex.def)             Requested size: 432.48051pt x 218.42337pt.
- [13]
-<img/labels.png, id=795, 196.735pt x 50.1875pt>
+ [14]
+<img/labels.png, id=831, 196.735pt x 50.1875pt>
 File: img/labels.png Graphic file (type png)
 <use img/labels.png>
-Package pdftex.def Info: img/labels.png  used on input line 183.
+Package pdftex.def Info: img/labels.png  used on input line 180.
 (pdftex.def)             Requested size: 432.48051pt x 110.33546pt.
-<img/count.png, id=796, 152.57pt x 51.19125pt>
+ [15 <./img/dataset_ukazka.png>]
+<img/count.png, id=837, 152.57pt x 51.19125pt>
 File: img/count.png Graphic file (type png)
 <use img/count.png>
-Package pdftex.def Info: img/count.png  used on input line 189.
+Package pdftex.def Info: img/count.png  used on input line 186.
 (pdftex.def)             Requested size: 432.48051pt x 145.11465pt.
- [14 <./img/dataset_ukazka.png> <./img/dataset_closer.png>] [15 <./img/labels.png> <./img/count.png>] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40]
-Overfull \hbox (5.36295pt too wide) in paragraph at lines 902--903
+ [16 <./img/dataset_closer.png> <./img/labels.png> <./img/count.png>] [17]
+<img/bin_wrong.png, id=850, 462.72874pt x 427.5975pt>
+File: img/bin_wrong.png Graphic file (type png)
+<use img/bin_wrong.png>
+Package pdftex.def Info: img/bin_wrong.png  used on input line 218.
+(pdftex.def)             Requested size: 432.48051pt x 399.65157pt.
+ [18]
+<img/bin_right.png, id=857, 259.97125pt x 276.03125pt>
+File: img/bin_right.png Graphic file (type png)
+<use img/bin_right.png>
+Package pdftex.def Info: img/bin_right.png  used on input line 225.
+(pdftex.def)             Requested size: 432.48051pt x 459.19733pt.
+ [19 <./img/bin_wrong.png>]
+<img/aug.png, id=865, 370.38374pt x 270.00874pt>
+File: img/aug.png Graphic file (type png)
+<use img/aug.png>
+Package pdftex.def Info: img/aug.png  used on input line 235.
+(pdftex.def)             Requested size: 432.48051pt x 315.2827pt.
+ [20 <./img/bin_right.png>] [21 <./img/aug.png>] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44]
+Overfull \hbox (5.36295pt too wide) in paragraph at lines 920--921
 []\T1/lmr/m/n/12 (-20) Nasledujúce expe-ri-menty boli na-vr-hnuté s cie-©om pre-skú-ma´ sprá-va-nie mo-delu YOLO11s
  []
 
-[41] [42] [43] [44] [45] [46] [47]
-<img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png, id=947, 867.24pt x 650.43pt>
+[45] [46] [47] [48] [49] [50] [51]
+<img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png, id=1007, 867.24pt x 650.43pt>
 File: img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png Graphic file (type png)
 <use img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png>
-Package pdftex.def Info: img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png  used on input line 1073.
+Package pdftex.def Info: img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png  used on input line 1092.
 (pdftex.def)             Requested size: 432.48051pt x 324.36067pt.
-<img/zasahy.png, id=948, 275.0275pt x 215.80624pt>
+<img/zasahy.png, id=1008, 275.0275pt x 215.80624pt>
 File: img/zasahy.png Graphic file (type png)
 <use img/zasahy.png>
-Package pdftex.def Info: img/zasahy.png  used on input line 1082.
+Package pdftex.def Info: img/zasahy.png  used on input line 1101.
 (pdftex.def)             Requested size: 432.48051pt x 339.38622pt.
- [48 <./img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png>] [49 <./img/zasahy.png>]) [50] (./includes/conclusion.tex) [51
+ [52 <./img/trainings/yolo11s_augmented_lightaug_p50/confusion_matrix.png>] [53 <./img/zasahy.png>]) [54] (./includes/conclusion.tex) [55
 
 
 ]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [52
+ [56
 
 
-] [53]
+] [57]
 
 Package biblatex Warning: No driver for 'arxiv'.
 (biblatex)                Using fallback driver on input line 51.
 
-[54] (./main.pri)
+[58] (./main.pri)
 \tf@pri=\write12
 \openout12 = `main.pri'.
 
@@ -1382,92 +1471,8 @@ Package biblatex Warning: No driver for 'arxiv'.
 
 
 ] (./includes/dataset.tex
-<img/img75.png, id=1022, 6825.5pt x 4416.5pt>
-File: img/img75.png Graphic file (type png)
-<use img/img75.png>
-Package pdftex.def Info: img/img75.png  used on input line 3.
-(pdftex.def)             Requested size: 409.71692pt x 265.04596pt.
-<img/nomen-anot.png, id=1023, 958.58125pt x 619.31375pt>
-File: img/nomen-anot.png Graphic file (type png)
-<use img/nomen-anot.png>
-Package pdftex.def Info: img/nomen-anot.png  used on input line 9.
-(pdftex.def)             Requested size: 409.71692pt x 264.70268pt.
-File: img/labels.png Graphic file (type png)
-<use img/labels.png>
-Package pdftex.def Info: img/labels.png  used on input line 15.
-(pdftex.def)             Requested size: 409.71692pt x 104.52765pt.
- [3
-
-
- <./img/img75.png>]) [4 <./img/nomen-anot.png>] (./includes/graphs.tex
-<img/bestResults/confusion_matrix_normalized.png, id=1034, 867.24pt x 650.43pt>
-File: img/bestResults/confusion_matrix_normalized.png Graphic file (type png)
-<use img/bestResults/confusion_matrix_normalized.png>
-Package pdftex.def Info: img/bestResults/confusion_matrix_normalized.png  used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 273.14896pt.
-<img/bestResults/F1_curve.png, id=1035, 650.43pt x 433.62pt>
-File: img/bestResults/F1_curve.png Graphic file (type png)
-<use img/bestResults/F1_curve.png>
-Package pdftex.def Info: img/bestResults/F1_curve.png  used on input line 8.
-(pdftex.def)             Requested size: 364.19667pt x 242.8057pt.
-<img/bestResults/P_curve.png, id=1036, 650.43pt x 433.62pt>
-File: img/bestResults/P_curve.png Graphic file (type png)
-<use img/bestResults/P_curve.png>
-Package pdftex.def Info: img/bestResults/P_curve.png  used on input line 13.
-(pdftex.def)             Requested size: 364.19667pt x 242.8057pt.
-<img/bestResults/PR_curve.png, id=1037, 650.43pt x 433.62pt>
-File: img/bestResults/PR_curve.png Graphic file (type png)
-<use img/bestResults/PR_curve.png>
-Package pdftex.def Info: img/bestResults/PR_curve.png  used on input line 18.
-(pdftex.def)             Requested size: 409.71692pt x 273.14896pt.
- [5
-
-
- <./img/bestResults/confusion_matrix_normalized.png> <./img/bestResults/F1_curve.png>]
-<img/bestResults/R_curve.png, id=1045, 650.43pt x 433.62pt>
-File: img/bestResults/R_curve.png Graphic file (type png)
-<use img/bestResults/R_curve.png>
-Package pdftex.def Info: img/bestResults/R_curve.png  used on input line 23.
-(pdftex.def)             Requested size: 409.71692pt x 273.14896pt.
-) [6 <./img/bestResults/P_curve.png> <./img/bestResults/PR_curve.png>] [7 <./img/bestResults/R_curve.png>] (./includes/codes.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 6.
- [8
-
-
-] [9] [10] [11] [12]) [13] (./includes/techHelp.tex [14
-
-
-])
-
-Package glossaries Warning: No \printglossary or \printglossaries found. 
-(Remove \makeglossaries if you don't want any glossaries.) 
-This document will not have a glossary.
-
-[15] (./main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DFE1D8E6207910FA03F7A53044454D23;22537.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 34229 strings out of 476025
- 592713 string characters out of 5790017
- 2342388 words of memory out of 5000000
- 53376 multiletter control sequences out of 15000+600000
- 585664 words of font info for 171 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 123i,17n,131p,2279b,3127s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (82 pages, 14835875 bytes).
-PDF statistics:
- 1465 PDF objects out of 1728 (max. 8388607)
- 1310 compressed objects within 14 object streams
- 484 named destinations out of 1000 (max. 500000)
- 42832 words of extra memory for PDF output out of 42996 (max. 10000000)
-
+<img/dataset_before.png, id=1086, 874.26625pt x 689.57625pt>
+File: img/dataset_before.png Graphic file (type png)
+<use img/dataset_before.png>
+Package pdftex.def Info: img/dataset_before.png  used on input line 3.
+(pdftex.def)             Requested s

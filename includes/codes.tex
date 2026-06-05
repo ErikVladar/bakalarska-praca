@@ -4,6 +4,299 @@
   language=python,
   style=code-listing
 ]
+from ultralytics import YOLO
+import pandas as pd
+import os
+
+# =====================================================
+# DATASET PATHS
+# =====================================================
+
+DEFAULT_DATASET = "/path to YAML"
+
+BINARY_DATASET = "/path to bin YAML"
+
+# =====================================================
+# TRENING
+# =====================================================
+
+def run_training(
+    model_name,
+    dataset_path,
+    run_name,
+    augmentation=False
+):
+
+    print("\n====================================")
+    print(f"Starting: {run_name}")
+    print("====================================\n")
+
+    # load model
+    model = YOLO(model_name)
+
+    # =============================================
+    # TRAIN
+    # =============================================
+
+    metrics = model.train(
+
+        # dataset
+        data=dataset_path,
+
+        # max epochs
+        epochs=200,
+
+        # EARLY STOPPING
+        patience=40,
+
+        # image size
+        imgsz=640,
+
+        # batch size
+        batch=8,
+
+        # =========================================
+        # AUGMENTACIA
+        # =========================================
+
+        hsv_h=0.015 if augmentation else 0.0,
+        hsv_s=0.7 if augmentation else 0.0,
+        hsv_v=0.4 if augmentation else 0.0,
+
+        degrees=10 if augmentation else 0.0,
+
+        translate=0.1 if augmentation else 0.0,
+
+        scale=0.5 if augmentation else 0.0,
+
+        shear=10 if augmentation else 0.0,
+
+        fliplr=0.0,
+        flipud=0.0,
+
+        # =========================================
+        # SAVE
+        # =========================================
+
+        project="custom output path",
+
+        name=run_name
+    )
+
+
+
+# =====================================================
+# DEF DATASET
+# =====================================================
+
+run_training(
+
+    model_name="yolo11s.pt",
+
+    dataset_path=DEFAULT_DATASET,
+
+    run_name="yolo11s_default_earlystop_p40",
+
+    augmentation=False
+)
+
+# =====================================================
+# BIN DATASET
+# =====================================================
+
+run_training(
+
+    model_name="yolo11s.pt",
+
+    dataset_path=BINARY_DATASET,
+
+    run_name="yolo11s_binary_earlystop_p40",
+
+    augmentation=False
+)
+
+# =====================================================
+# AUG DATASET
+# =====================================================
+
+run_training(
+
+    model_name="yolo11s.pt",
+
+    dataset_path=DEFAULT_DATASET,
+
+    run_name="yolo11s_augmented_earlystop_p40",
+
+    augmentation=True
+)
+
+\end{lstlisting}
+
+\begin{lstlisting}[
+    caption={Kód použitý na binarizáciu datasetu},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+
+import cv2
+import os
+import shutil
+from glob import glob
+
+# =====================================================
+# INPUT / OUTPUT PATHS
+# =====================================================
+
+# ORIGINAL DATASET
+input_images = "/input_folder_imgs"
+input_labels = "/input_folder_labels"
+
+# NEW BINARY DATASET
+output_images = "/output_folder_imgs"
+output_labels = "/output_folder_labels"
+
+# create folders
+os.makedirs(output_images, exist_ok=True)
+os.makedirs(output_labels, exist_ok=True)
+
+# =====================================================
+# PROCESS IMAGES
+# =====================================================
+
+for img_path in glob(input_images + "/*"):
+
+    # =============================================
+    # LOAD IMAGE
+    # =============================================
+
+    img = cv2.imread(img_path)
+
+    # grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # blur
+    blur = cv2.GaussianBlur(gray, (5,5), 0)
+
+    # =============================================
+    # ADAPTIVE BINARIZATION
+    # =============================================
+
+    binary = cv2.adaptiveThreshold(
+
+        blur,
+
+        255,
+
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+
+        cv2.THRESH_BINARY,
+
+        21,
+
+        15
+    )
+
+    # =============================================
+    # REMOVE SMALL NOISE
+    # =============================================
+
+    kernel = cv2.getStructuringElement(
+        cv2.MORPH_RECT,
+        (2,2)
+    )
+
+    cleaned = cv2.morphologyEx(
+        binary,
+        cv2.MORPH_OPEN,
+        kernel
+    )
+
+    cleaned = cv2.medianBlur(cleaned, 3)
+
+    # =============================================
+    # SAVE IMAGE
+    # =============================================
+
+    filename = os.path.basename(img_path)
+
+    output_image_path = os.path.join(
+        output_images,
+        filename
+    )
+
+    cv2.imwrite(output_image_path, cleaned)
+
+    # =============================================
+    # COPY LABEL
+    # =============================================
+
+    label_name = os.path.splitext(filename)[0] + ".txt"
+
+    input_label_path = os.path.join(
+        input_labels,
+        label_name
+    )
+
+    output_label_path = os.path.join(
+        output_labels,
+        label_name
+    )
+
+    # copy label if exists
+    if os.path.exists(input_label_path):
+
+        shutil.copy(
+            input_label_path,
+            output_label_path
+        )
+
+print("Binarization + label copy completed.")
+
+\end{lstlisting}
+
+\begin{lstlisting}[
+    caption={Kód na spočítanie labelov pre štatistiku},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+import os
+import json
+from collections import defaultdict
+
+def print_all_labels(json_dir):
+# Dictionary to hold label counts
+    label_counts = defaultdict(int)
+    # Iterate over all JSON files in the directory
+    for json_file in os.listdir(json_dir):
+        if json_file.endswith(".json"):
+            json_path = os.path.join(json_dir, json_file)
+            with open(json_path, "r") as f:
+                data = json.load(f)
+            # Extract labels from the JSON file
+            for shape in data.get("shapes", []):
+                label = shape.get("label", "no-label")
+                label_counts[label] += 1
+    return label_counts
+
+# Directory containing the JSON files
+json_dir = "dataset/img:json"
+# Find labels and their counts
+labels = print_all_labels(json_dir)
+# Print results
+print("Labels and their counts:")
+for label, count in labels.items():
+    print(f"{label}: {count}")
+
+\end{lstlisting}
+
+\begin{lstlisting}[
+  caption={Trénovanie YOLO11},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
 import gc
 import torch
 from ultralytics import YOLO
@@ -51,7 +344,7 @@ if __name__ == "__main__":
 
 \end{lstlisting}
 \begin{lstlisting}[
-    caption={Detekcia viacerých obrázkov},
+  caption={Detekcia vviacerých obrázkov},
   label={lst:python},
   language=python,
   style=code-listing
@@ -108,7 +401,7 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \begin{lstlisting}[
-    caption={Kód použitý na binarizáciu a augmentáciu datasetu},
+  caption={Kód použitý pre binarizáciu a augmentáciu datasetu},
   label={lst:python},
   language=python,
   style=code-listing
@@ -192,41 +485,5 @@ def process_dataset(src_path, dst_bin_path, dst_aug_path):
 if __name__ == "__main__":
     process_dataset(ORIGINAL_DATASET, BINARIZED_DATASET, AUGMENTED_DATASET)
     print("Datasets created: binarized and augmented.")
-
-\end{lstlisting}
-
-\begin{lstlisting}[
-    caption={Kód na spočítanie labelov pre štatistiku},
-  label={lst:python},
-  language=python,
-  style=code-listing
-]
-import os
-import json
-from collections import defaultdict
-
-def print_all_labels(json_dir):
-# Dictionary to hold label counts
-    label_counts = defaultdict(int)
-    # Iterate over all JSON files in the directory
-    for json_file in os.listdir(json_dir):
-        if json_file.endswith(".json"):
-            json_path = os.path.join(json_dir, json_file)
-            with open(json_path, "r") as f:
-                data = json.load(f)
-            # Extract labels from the JSON file
-            for shape in data.get("shapes", []):
-                label = shape.get("label", "no-label")
-                label_counts[label] += 1
-    return label_counts
-
-# Directory containing the JSON files
-json_dir = "dataset/img:json"
-# Find labels and their counts
-labels = print_all_labels(json_dir)
-# Print results
-print("Labels and their counts:")
-for label, count in labels.items():
-    print(f"{label}: {count}")
 
 \end{lstlisting}

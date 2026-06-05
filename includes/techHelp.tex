@@ -1,5 +1,175 @@
 \paragraph{Požiadavky na prostredie}:
 
+Pre správne spustenie skriptov je potrebné mať nainštalované:
+
+\begin{itemize}
+    \item Python (odporúčaná verzia: 3.8 alebo novšia)
+    \item Ultralytics (knižnica pre YOLO modely)
+\end{itemize}
+Inštalácia potrebných balíkov (v termináli):
+\begin{lstlisting}[
+  caption={},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+pip install ultralytics
+
+\end{lstlisting}
+
+\paragraph{Použitie YOLO:}
+
+
+\begin{itemize}
+    \item Umiestnite do premennej \texttt{model\_name} natrénované váhy (napr. \texttt{best.pt}) alebo zvoľte YOLO model.
+    \item Pripravte si adresár s obrázkami, ktoré chcete analyzovať.
+\end{itemize}
+Spustenie trénovacieho skriptu:
+\begin{lstlisting}[
+  caption={script.py},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+from ultralytics import YOLO
+import pandas as pd
+import os
+
+# =====================================================
+# DATASET PATHS
+# =====================================================
+
+DEFAULT_DATASET = "/path to YAML"
+
+BINARY_DATASET = "/path to bin YAML"
+
+# =====================================================
+# TRENING
+# =====================================================
+
+def run_training(
+    model_name,
+    dataset_path,
+    run_name,
+    augmentation=False
+):
+
+    print("\n====================================")
+    print(f"Starting: {run_name}")
+    print("====================================\n")
+
+    # load model
+    model = YOLO(model_name)
+
+    # =============================================
+    # TRAIN
+    # =============================================
+
+    metrics = model.train(
+
+        # dataset
+        data=dataset_path,
+
+        # max epochs
+        epochs=200,
+
+        # EARLY STOPPING
+        patience=40,
+
+        # image size
+        imgsz=640,
+
+        # batch size
+        batch=8,
+
+        # =========================================
+        # AUGMENTACIA
+        # =========================================
+
+        hsv_h=0.015 if augmentation else 0.0,
+        hsv_s=0.7 if augmentation else 0.0,
+        hsv_v=0.4 if augmentation else 0.0,
+
+        degrees=10 if augmentation else 0.0,
+
+        translate=0.1 if augmentation else 0.0,
+
+        scale=0.5 if augmentation else 0.0,
+
+        shear=10 if augmentation else 0.0,
+
+        fliplr=0.0,
+        flipud=0.0,
+
+        # =========================================
+        # SAVE
+        # =========================================
+
+        project="/custom output path",
+
+        name=run_name
+    )
+
+
+
+# =====================================================
+# DEF DATASET
+# =====================================================
+
+run_training(
+
+    model_name="yolo11s.pt",
+
+    dataset_path=DEFAULT_DATASET,
+
+    run_name="yolo11s_default_earlystop_p40",
+
+    augmentation=False
+)
+
+# =====================================================
+# BIN DATASET
+# =====================================================
+
+run_training(
+
+    model_name="yolo11s.pt",
+
+    dataset_path=BINARY_DATASET,
+
+    run_name="yolo11s_binary_earlystop_p40",
+
+    augmentation=False
+)
+
+# =====================================================
+# AUG DATASET
+# =====================================================
+
+run_training(
+
+    model_name="yolo11s.pt",
+
+    dataset_path=DEFAULT_DATASET,
+
+    run_name="yolo11s_augmented_earlystop_p40",
+
+    augmentation=True
+)
+        
+\end{lstlisting}
+
+\begin{lstlisting}[
+  caption={zadajte do terminálu (treba sa nachádzať v adresári)},
+  label={lst:python},
+  language=python,
+  style=code-listing
+]
+    python3 script.py
+\end{lstlisting}
+
+\paragraph{Požiadavky na prostredie}:
+
 Pre správne spustenie skriptov a použitie natrénovaných váh je potrebné mať nainštalované:
 
 \begin{itemize}
